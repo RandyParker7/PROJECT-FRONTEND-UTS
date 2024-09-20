@@ -1,0 +1,125 @@
+:root {
+    --primary: #030000;
+    --bg : #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--primary);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: var(--primary);
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .nav-extra {
+    position: absolute;
+    justify-content: space-between;
+    right: 7%;
+    color: var(--bg);
+}
+
+.navbar .nav-extra a {
+    color: var(--bg);
+}
+
+.navbar .navbar-logo {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.navbar .navbar-logo img {
+    height: 100px;
+    max-width: 150px;
+    margin-left: 20px;
+}
+
+.navbar .navbar-nav a:hover {
+
+}
+
+.navbar .navbar-nav a {
+    color: var(--bg);
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--bg);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+/* Image Slider */
+.slider-input {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider {
+    max-width: 1040px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-img {
+    background-size: auto 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 10px;
+    position: relative;
+    height: 420px;
+    border-radius: 100px;
+    cursor: pointer;
+    flex: 0.1;
+    overflow: hidden;
+    transition: flex 0.5s ease-in-out,border-radius 1s ease-in-out;
+}
+
+.slider-img:hover {
+    flex: 0.8;
+    border-radius: 40px;
+}
