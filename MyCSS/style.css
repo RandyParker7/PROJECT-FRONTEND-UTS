@@ -215,38 +215,63 @@ body {
 /* Car Review end */
 
 /* Events Section */
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust columns responsively */
-    gap: 20px;
-    margin: 40px 0;
-    padding: 0 20px; /* Add padding for responsiveness */
+@import url('https://fonts.googleapis.com/css2?family=Poppins');t
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.news-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
+a{
+    text-decoration: none;
 }
-
-.news-item img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s ease-in-out;
-}
-
-.news-item:hover img {
-    transform: scale(1.1);
-}
-
-.news-text {
+/*navbar */
+.navbar{
     position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
+    top: 0;
+    left: 0;
+    display: flex;
     width: 100%;
-    padding: 10px;
-    text-align: center; /* Center text for better appearance */
+    justify-content: space-between;
+    padding: 20%px;
+    color: whitesmoke;
 }
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+.nav-links li{
+    margin: 0 30px;
+}
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://www.classicdriver.com/cdn-cgi/image/format=auto,fit=scale-down,width=821/sites/default/files/article_images/267-gims-1073-copyright-mathieu-bonnevie-1920_1.jpg');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.header-content{
+    margin-bottom:150px;
+    color: #fff;
+    text-align: center;
+}
+.header-contenth2{
+    font-size: 4vmin;
+
+}
+.line{
+    width: 150px;
+    height: 4px;
+    background: #bd0000;
+    margin: 10px auto;
+    border-radius: 3px;
+}
+.header-content h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
 /* Events Section end */
