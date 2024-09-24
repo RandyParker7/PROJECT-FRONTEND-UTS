@@ -277,7 +277,6 @@ header{
     height: 472.5px; 
 }
 /* Car Review end */
-<<<<<<< HEAD
 
 /*Logo Slider */
 .brand h2 {
@@ -368,8 +367,7 @@ ul{
 	background-color: #ffffff;
 }
 /* Footer End */
-=======
-/* Events Section */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins');t
 *{
     margin: 0;
@@ -432,5 +430,3 @@ header{
     }
 }
 
-/* Events Section end */
->>>>>>> 850de222a4f211265cfcc3ef062f670d51a85bf0
