@@ -33,39 +33,49 @@ body {
 
 /* Navbar */
 .navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999; 
     display: flex;
+    position: absolute;
     justify-content: center;
     align-items: center;
     padding: 1.4rem 7%;
-    background-color: linear-gradient(to bottom, transparent(255, 255, 255, 0), black);;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), black);
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.navbar .nav-extra {
+    position: absolute;
+    justify-content: space-between;
+    right: 7%;
+    color: var(--bg);
+}
+.navbar .nav-extra a {
+    color: var(--bg);
+}
+.navbar .navbar-logo {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.navbar .navbar-logo img {
+    height: 100px;
+    max-width: 150px;
+    margin-left: 20px;
 }
 
-/* Navbar Links */
-.nav-links, .navbar-nav {
-    display: flex;
-    align-items: center;
-    list-style: none; 
+.navbar .navbar-nav a {
+    color: var(--bg);
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
 }
 
-.nav-links li, .navbar-nav a {
-    margin: 0 15px; 
-    color: var(--bg); 
-    font-size: 1.5rem;
-}
-
-.nav-links li a, .navbar-nav a {
-    text-decoration: none; 
-    color: var(--bg); 
-    font-size: 1.5rem; 
-}
-
-/* Hover Effects */
-.navbar-nav a:hover::after, .nav-links li a:hover::after {
+.navbar .navbar-nav a::after {
     content: '';
     display: block;
     padding-bottom: 0.5rem;
@@ -74,7 +84,7 @@ body {
     transition: 0.2s linear;
 }
 
-.navbar-nav a:hover::after, .nav-links li a:hover::after {
+.navbar .navbar-nav a:hover::after {
     transform: scaleX(0.5);
 }
 
