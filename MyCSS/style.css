@@ -381,3 +381,13 @@ ul{
 	background-color: #ffffff;
 }
 /* Footer End */
+/*  Event */
+section{
+    width: 80%;
+    margin: 80 px auto;
+}
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: white;
+}
