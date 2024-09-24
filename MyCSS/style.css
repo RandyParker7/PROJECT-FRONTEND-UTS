@@ -33,57 +33,39 @@ body {
 
 /* Navbar */
 .navbar {
-    display: flex;
     position: absolute;
-    justify-content: center;
-    align-items: center;
-    padding: 1.4rem 7%;
-    background-color: var(--primary);
-    border-bottom: 1px solid black;
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 9999; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: transparent;
 }
 
-.navbar .nav-extra {
-    position: absolute;
-    justify-content: space-between;
-    right: 7%;
-    color: var(--bg);
+/* Navbar Links */
+.nav-links, .navbar-nav {
+    display: flex;
+    align-items: center;
+    list-style: none; 
 }
 
-.navbar .nav-extra a {
-    color: var(--bg);
+.nav-links li, .navbar-nav a {
+    margin: 0 15px; 
+    color: var(--bg); 
+    font-size: 1.5rem;
 }
 
-.navbar .navbar-logo {
-    position: absolute;
-    top: 50%;
-    left: 7%;
-    transform: translateY(-50%);
-    z-index: 1;
+.nav-links li a, .navbar-nav a {
+    text-decoration: none; 
+    color: var(--bg); 
+    font-size: 1.5rem; 
 }
 
-.navbar .navbar-logo img {
-    height: 100px;
-    max-width: 150px;
-    margin-left: 20px;
-}
-
-.navbar .navbar-nav a:hover {
-
-}
-
-.navbar .navbar-nav a {
-    color: var(--bg);
-    display: inline-block;
-    font-size: 1.3rem;
-    margin: 0 1rem;
-}
-
-.navbar .navbar-nav a::after {
+/* Hover Effects */
+.navbar-nav a:hover::after, .nav-links li a:hover::after {
     content: '';
     display: block;
     padding-bottom: 0.5rem;
@@ -92,9 +74,31 @@ body {
     transition: 0.2s linear;
 }
 
-.navbar .navbar-nav a:hover::after {
+.navbar-nav a:hover::after, .nav-links li a:hover::after {
     transform: scaleX(0.5);
 }
+
+/* Navbar Logo */
+.navbar-logo {
+    position: absolute;
+    top: 50%;
+    left: 5%; 
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.navbar-logo img {
+    height: 80px; 
+    max-width: 120px;
+    margin-left: 10px; 
+}
+
+.nav-extra {
+    position: absolute;
+    right: 7%; 
+    color: var(--bg);
+}
+
 
 /* Image Slider */
 .slider-input {
@@ -273,6 +277,7 @@ header{
     height: 472.5px; 
 }
 /* Car Review end */
+<<<<<<< HEAD
 
 /*Logo Slider */
 .brand h2 {
@@ -363,3 +368,69 @@ ul{
 	background-color: #ffffff;
 }
 /* Footer End */
+=======
+/* Events Section */
+@import url('https://fonts.googleapis.com/css2?family=Poppins');t
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://www.classicdriver.com/cdn-cgi/image/format=auto,fit=scale-down,width=821/sites/default/files/article_images/267-gims-1073-copyright-mathieu-bonnevie-1920_1.jpg');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.header-content{
+    margin-bottom:150px;
+    color: #fff;
+    text-align: center;
+}
+.header-contenth2{
+    font-size: 4vmin;
+
+}
+.line{
+    width: 150px;
+    height: 4px;
+    background: #bd0000;
+    margin: 10px auto;
+    border-radius: 3px;
+}
+.header-content h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+/* Mobile device */
+@media only screen and ( max-width:850px){
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+
+    }
+    .nav-links li{ 
+        margin: 30px auto;
+    }
+}
+
+/* Events Section end */
+>>>>>>> 850de222a4f211265cfcc3ef062f670d51a85bf0
