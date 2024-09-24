@@ -99,6 +99,10 @@ body {
     color: var(--bg);
 }
 
+.nav-extra a {
+    color: var(--bg);
+}
+
 
 /* Image Slider */
 .slider-input {
