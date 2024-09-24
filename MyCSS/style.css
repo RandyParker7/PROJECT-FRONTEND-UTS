@@ -124,7 +124,7 @@ body {
     overflow: hidden;
     transition: flex 0.5s ease-in-out,border-radius 1s ease-in-out;
     margin-top: 8rem;
-    margin-bottom: 25rem;
+    margin-bottom: 15rem;
 }
 
 .slider-img:hover {
@@ -222,6 +222,45 @@ body {
 }
 /* Cars end */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins');t
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://www.classicdriver.com/cdn-cgi/image/format=auto,fit=scale-down,width=821/sites/default/files/article_images/267-gims-1073-copyright-mathieu-bonnevie-1920_1.jpg');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.header-content{
+    margin-bottom:150px;
+    color: #fff;
+    text-align: center;
+}
+.header-contenth2{
+    font-size: 4vmin;
+
+}
+.line{
+    width: 150px;
+    height: 4px;
+    background: #bd0000;
+    margin: 10px auto;
+    border-radius: 3px;
+}
+.header-content h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+/* Events Section end */
+
 /* Car Review start */
 .reviewcontainer{
     margin-top: 110px;
@@ -234,3 +273,93 @@ body {
     height: 472.5px; 
 }
 /* Car Review end */
+
+/*Logo Slider */
+.brand h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 8rem;
+}
+.logo-slider .logo-list {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(10,1fr);
+}
+.logo-slider .logo-list .logo-item {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+}
+/* Footer Start */
+/* Footer */
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: var(--primary);
+    padding: 70px 0;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: var(--bg);
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2)\\;
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+/* Footer End */
