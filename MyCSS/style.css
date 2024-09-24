@@ -42,7 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1.4rem 7%;
-    background-color: transparent;
+    background-color: linear-gradient(to bottom, transparent(255, 255, 255, 0), black);;
 }
 
 /* Navbar Links */
