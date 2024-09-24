@@ -277,7 +277,6 @@ header{
     height: 472.5px; 
 }
 /* Car Review end */
-<<<<<<< HEAD
 
 /*Logo Slider */
 .brand h2 {
@@ -368,69 +367,3 @@ ul{
 	background-color: #ffffff;
 }
 /* Footer End */
-=======
-/* Events Section */
-@import url('https://fonts.googleapis.com/css2?family=Poppins');t
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-a{
-    text-decoration: none;
-}
-header{
-    width: 100vw;
-    height: 100vh;
-    background-image: url('https://www.classicdriver.com/cdn-cgi/image/format=auto,fit=scale-down,width=821/sites/default/files/article_images/267-gims-1073-copyright-mathieu-bonnevie-1920_1.jpg');
-    background-position: bottom;
-    background-size: cover;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-.header-content{
-    margin-bottom:150px;
-    color: #fff;
-    text-align: center;
-}
-.header-contenth2{
-    font-size: 4vmin;
-
-}
-.line{
-    width: 150px;
-    height: 4px;
-    background: #bd0000;
-    margin: 10px auto;
-    border-radius: 3px;
-}
-.header-content h1{
-    font-size: 7vmin;
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-/* Mobile device */
-@media only screen and ( max-width:850px){
-    .navbar{
-        padding: 0;
-    }
-    .logo{
-        position: absolute;
-        top: 30px;
-        left: 30px;
-    }
-    .nav-links{
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        justify-content: center;
-
-    }
-    .nav-links li{ 
-        margin: 30px auto;
-    }
-}
-
-/* Events Section end */
->>>>>>> 850de222a4f211265cfcc3ef062f670d51a85bf0
