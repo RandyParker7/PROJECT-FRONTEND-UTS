@@ -34,10 +34,51 @@
             <a href="#" id="search-button"><i data-feather="search"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
-        <!-- Navbar Extra-->
+    <!-- Navbar Extra-->
 
     </nav>
     <!-- Nav End -->
+
+    <!-- Slide Show Start-->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <video autoplay muted loop id="myVideo">
+                <source src="img/video2.mp4" type="video/mp4" >
+            </video>
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="img/bg2.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="img/bg3.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img/bg4.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img/bg5.jpg" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+    </div>
+        
+        
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+        </div>
+    <!-- Slide Show End-->
+    
     <!-- Slider start-->
         <main class="slider">
             <input id="input" type="radio" name="slider" class="slider-input">
@@ -58,51 +99,51 @@
         <div class="logo-slider">
             <div class="logo-list">
                 <img src="Brand/audi-logo-2016-download.png" alt="Audi Logo" class="logo-item">
-                <img src="Brand/bmw-logo-2020-gray-download.png" alt="BMW Logo" class="logo-item">
+                <img src="Brand/bmw-logo.png" alt="BMW Logo" class="logo-item">
                 <img src="Brand/dodge-logo-2010-download.png" alt="Dodge Logo" class="logo-item">
-                <img src="Brand/ford-logo-2017-download.png" alt="Ford Logo" class="logo-item">
+                <img src="Brand/ford-logo.png" alt="Ford Logo" class="logo-item">
                 <img src="Brand/jeep-logo-1993-download.png" alt="Jeep Logo" class="logo-item">
-                <img src="Brand/porsche-logo-2014-full-download.png" alt="Porsche Logo" class="logo-item">
+                <img src="Brand/lamborghini-logo.png" alt="Porsche Logo" class="logo-item">
                 <img src="Brand/subaru-logo-2019-download.png" alt="Subaru Logo" class="logo-item">
-                <img src="Brand/tesla-logo-2007-full-download.png" alt="Tesla Logo" class="logo-item">
+                <img src="Brand/tesla-logo.png" alt="Tesla Logo" class="logo-item">
             </div>
         </div>
     </section>
 
         
-    <!-- Footer Start-->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>company</h4>
-                    <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>follow us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer End-->
+<!-- Footer Start-->
+<footer>
+    <div class="fol">
+        <p>FOLLOW US</p>
+        <a href="">Our Social Media</a>
+    </div>
+
+    <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+        <a href="#">Home</a>
+        <a href="cars.html">Cars</a>
+        <a href="event.html">Event & News</a>
+        <a href="review.html">Car Review</a>
+        <a href="guide.html">Car Buying Guide</a>
+    </div>
+
+    <div class="credit">
+        <p>@2024<a href="">DriveLux</a></p>
+    </div>
+</footer>
+<!-- Footer End-->
 
     <!-- Icons -->
     <script>
         feather.replace();
     </script>
 
-    
+    <script src="script.js"></script>
 </body>
 
 
