@@ -211,6 +211,31 @@ body {
     border-radius: 40px;
 }
 
+
+/* Logo Slider */
+.logo-img {
+    width: 150px;
+    height: 130px;
+    animation: scroll 30s linear infinite;
+}
+
+.slide-track {
+    width: 100%;
+    display: flex;
+    gap: 3em;
+    overflow: hidden;
+}
+
+.slider-logo {
+    max-width: 100%;
+    padding: 8em 2em;
+}
+
+@keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translatex(-1000%)}
+}
+
 /* Cars start */
 .cardcontainer{
     margin-top: 110px;
@@ -342,20 +367,9 @@ header{
 /* Car Review end */
 
 /*Logo Slider */
-.brand h2 {
+h2 {
     text-align: center;
     font-size: 2.6rem;
-    margin-bottom: 8rem;
-}
-.logo-slider .logo-list {
-    display: grid;
-    gap: 18px;
-    grid-template-columns: repeat(10,1fr);
-}
-.logo-slider .logo-list .logo-item {
-    width: 100px;
-    height: 150px;
-    object-fit: cover;
 }
 
 /* Footer */
@@ -364,7 +378,6 @@ footer {
     text-align: center;
     padding: 1rem 0 3rem;
     margin-top: 3rem;
-
 }
 
 footer .fol {
@@ -539,3 +552,4 @@ p{
     opacity: 0.8;
 }
 /* Read More Cars End */
+
