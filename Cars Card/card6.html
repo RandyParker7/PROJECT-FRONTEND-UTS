@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="../MyCSS/style.css">
+    <title>Car Detail</title>
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <!-- Nav Start -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo"><img src="img/logo.png" alt=""></a>
+
+        <div class="navbar-nav">
+            <a href="../index.html">Home</a>
+            <a href="../cars.html">Cars</a>
+            <a href="../event.html">Event & News</a>
+            <a href="../review.html">Car Review</a>
+            <a href="../guide.html">Car Buying Guide</a>
+        </div>
+
+        <div class="nav-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+
+
+    </nav>
+    <!-- Nav End -->
+
+    <div class="detail-wrapper">
+        <div class="display-card">
+            <div class="product-imgs">
+                <div class="img-display">
+                    <div class="img-showcase">
+                        <img src="../img/revuelto1.jpg" alt="car image">
+                    </div>
+                </div>
+                <div class="img-select">
+                    <div class="img-item">
+                        <a href="#" data-id="1">
+                            <img src="../img/revuelto1.jpg" alt="car image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="2">
+                            <img src="../img/revuelto2.jpg" alt="car image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="3">
+                            <img src="../img/revuelto3.jpg" alt="car image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="4">
+                            <img src="../img/revuelto4.jpg" alt="car image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-content">
+                <h2 class="product-title">Lamborghini Revuelto</h2>
+
+                <div class="product-price">
+                    <p class="car-price">Price: <span>Rp 9.292.759.703,70</span></p>
+                </div>
+
+                <div class="product-detail">
+                    <h2>about this car: </h2>
+                    <p>Mesin V-12 6,5 liter 814-hp yang dipasang di tengah adalah naturally aspirated dan melesat hingga redline 9500-rpm. Dari tiga motor listrik yang terintegrasi ke dalam powertrain, dua menggerakkan roda depan, sementara yang ketiga terintegrasi ke dalam transmisi otomatis kopling ganda delapan kecepatan dan membantu mesin gas V-12 pada as roda belakang. Total output dari powertrain ini adalah 1001 tenaga kuda, yang terbanyak dari semua Lamborghini yang pernah ada. Itu juga tenaga kuda terbanyak dari semua plug-in hybrid, menggeser 986-hp dari posisi teratas. Kami belum menguji Revuelto, tetapi setelah uji coba pertama kami, kami memperkirakan akan dan mencapai kecepatan tertinggi 218 mph. Dari balik kemudi, akselerasi Revuelto terasa intens, dengan motor listrik yang memberikan lonjakan tenaga seketika saat melaju dan mesin V-12 meraung saat Anda menjelajahi kedalaman rentang tenaganya. Penanganannya lebih tajam dan lebih lincah dibandingkan dengan Aventador sebelumnya. Revuelto diuntungkan oleh sistem kemudi roda belakang dan sistem vektor torsi yang memberikannya stabilitas lebih di tikungan dan membuatnya lebih mudah melewati puncak tikungan.</p>
+                    <p>Revuelto adalah mobil hibrida plug-in, tetapi bukan dalam pengertian tradisional. Mobil ini bukanlah pesaing Prius Prime, yang melaju kencang dari titik A ke titik B. Baterai 3,8 kWh-nya, yang terletak di antara dua jok bucket, menyediakan daya yang cukup untuk memberi daya pada Revuelto sejauh sekitar 5 mil hanya dengan tenaga listrik. Itu cukup untuk menyelinap tanpa diketahui dari lingkungan sekitar Anda jika Anda harus pergi lebih awal pada Sabtu pagi tanpa membangunkan tetangga, tetapi tidak cukup untuk menghindari penggunaan bensin sama sekali. Revuelto adalah mobil hibrida performa, yang menggunakan listrik dalam baterainya—dan tiga motor listrik yang ditenagainya—untuk menambah daya pada output powertrain.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer Start-->
+<footer>
+    <div class="fol">
+        <p>FOLLOW US</p>
+        <a href="">Our Social Media</a>
+    </div>
+
+    <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+        <a href="../index.html">Home</a>
+        <a href="../cars.html">Cars</a>
+        <a href="../event.html">Event & News</a>
+        <a href="../review.html">Car Review</a>
+        <a href="../guide.html">Car Buying Guide</a>
+    </div>
+
+    <div class="credit">
+        <p>@2024<a href="">DriveLux</a></p>
+    </div>
+</footer>
+<!-- Footer End-->
+</body>
+    <!-- Icons -->
+    <script>
+        feather.replace();
+    </script>
+    <script>
+        document.querySelectorAll('.img-item a').forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default anchor behavior
+                const newImageSrc = this.querySelector('img').src; // Get the source of the clicked image
+                document.querySelector('.img-showcase img').src = newImageSrc; // Update the main image
+            });
+        });
+    </script>
+</html>
