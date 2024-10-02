@@ -493,6 +493,29 @@ p{
 .explore-content .ctn{
     margin-top: 40px;
 }
+.content-col{
+    width: 40%;
+}
+.tours .row .col{
+    width: 50%;
+}
+.image-col{
+    width: 60%;
+}
+.tours .image-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+.image-gallery img{
+   max-width: 300px;
+    margin: 10px;
+}
+.content-col h1{
+    font-size: 7vmin;
+    color: #fff;
+}
 /*global*/
 *{
     margin: 0;
