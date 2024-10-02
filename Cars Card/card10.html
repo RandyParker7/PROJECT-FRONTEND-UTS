@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="../MyCSS/style.css">
+    <title>Car Detail</title>
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <!-- Nav Start -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo"><img src="img/logo.png" alt=""></a>
+
+        <div class="navbar-nav">
+            <a href="../index.html">Home</a>
+            <a href="../cars.html">Cars</a>
+            <a href="../event.html">Event & News</a>
+            <a href="../review.html">Car Review</a>
+            <a href="../guide.html">Car Buying Guide</a>
+        </div>
+
+        <div class="nav-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+
+
+    </nav>
+    <!-- Nav End -->
+
+    <div class="detail-wrapper">
+        <div class="display-card">
+            <div class="product-imgs">
+                <div class="img-display">
+                    <div class="img-showcase">
+                        <img src="../img/fkp1.jpg" alt="car image">
+                    </div>
+                </div>
+                <div class="img-select">
+                    <div class="img-item">
+                        <a href="#" data-id="1">
+                            <img src="../img/fkp1.jpg" alt="car image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="2">
+                            <img src="../img/fkp2.jpg" alt="car image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="3">
+                            <img src="../img/fkp3.jpg" alt="car image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="4">
+                            <img src="../img/fkp4.jpg" alt="car image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-content">
+                <h2 class="product-title">Lamborghini Sián FKP 37</h2>
+
+                <div class="product-price">
+                    <p class="car-price">Price: <span>Rp 90.144.448.690,30</span></p>
+                </div>
+
+                <div class="product-detail">
+                    <h2>about this car: </h2>
+                    <p>Pabrikan: Lamborghini</p>
+                    <p>Produksi: Tahun 2020–2022</p>
+                    <p>Perakitan: Italia: Sant'Agata Bolognese</p>
+                    <p>Perancang: Mitja Borkert</p>
+                    <h3>Bodi dan sasis</h3>
+                    <p>Kelas: Mobil sport ( S )
+                    <p>Gaya tubuh</p>
+                    <p>mobil coupe 2 pintu</p>
+                    <p>mobil roadster 2 pintu</p>
+                    <p>Tata Letak: Mesin tengah, penggerak semua roda</p>
+                    <p>Pintu: Menggunting</p>
+                    <h3>Sistem Penggerak</h3>
+                    <p>Mesin: 6,5 liter L539 V12</p>
+                    <p>Motor listrik: Motor listrik 48 volt ke kotak roda gigi</p>
+                    <p>Daya keluaran</p>
+                    <p>Mesin: 785 PS (577 kW; 774 hp)</p>
+                    <p>Motor listrik: 34 PS (25 kW; 34 hp)</p>
+                    <p>Gabungan: 819 PS (602 kW; 808 hp)</p>
+                    <p>Penularan: Transmisi manual otomatis ISR 7-percepatan</p>
+                    <p>Sistem transmisi hibrida	Hibrida penuh</p>
+                    <h3>Ukuran</h3>
+                    <p>Jarak roda: 2.700 mm (106,3 inci)</p>
+                    <p>Panjang: 4.980 mm (196,1 inci)</p>
+                    <p>Lebar</p>
+                    <p>2.101 mm (82,7 in) (tanpa kaca spion)</p>
+                    <p>2.265 mm (89,2 in) (dengan kaca spion)</p>
+                    <p>Tinggi: 1.133 mm (44,6 inci)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer Start-->
+<footer>
+    <div class="fol">
+        <p>FOLLOW US</p>
+        <a href="">Our Social Media</a>
+    </div>
+
+    <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+        <a href="../index.html">Home</a>
+        <a href="../cars.html">Cars</a>
+        <a href="../event.html">Event & News</a>
+        <a href="../review.html">Car Review</a>
+        <a href="../guide.html">Car Buying Guide</a>
+    </div>
+
+    <div class="credit">
+        <p>@2024<a href="">DriveLux</a></p>
+    </div>
+</footer>
+<!-- Footer End-->
+</body>
+    <!-- Icons -->
+    <script>
+        feather.replace();
+    </script>
+    <script>
+        document.querySelectorAll('.img-item a').forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default anchor behavior
+                const newImageSrc = this.querySelector('img').src; // Get the source of the clicked image
+                document.querySelector('.img-showcase img').src = newImageSrc; // Update the main image
+            });
+        });
+    </script>
+</html>
