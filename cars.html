@@ -36,10 +36,19 @@
 
     </nav>
     <!-- Nav End -->
-    
-    <!-- Card -->
+
+    <!-- Filter Buttons -->
+    <div class="filter-container">
+        <button class="filter-btn" data-brand="all">All</button>
+        <button class="filter-btn" data-brand="mclaren">McLaren</button>
+        <button class="filter-btn" data-brand="ferrari">Ferrari</button>
+        <button class="filter-btn" data-brand="lamborghini">Lamborghini</button>
+        <button class="filter-btn" data-brand="porsche">Porsche</button>
+    </div>
+
+    <!-- Card Start -->
     <div class="cardcontainer">
-        <div class="carscard">
+        <div class="carscard" data-brand="mclaren">
             <img src="img/senna1.jpg" alt="image">
             <div class="info">
                 <h1>Mclaren Senna</h1>
@@ -168,5 +177,28 @@
     <!-- Icons -->
     <script>
         feather.replace();
+    </script>
+
+    <!-- Filter -->
+    <script>
+    // Select all filter buttons and car cards
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const carCards = document.querySelectorAll('.carscard');
+
+    // Add event listeners to filter buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const brand = button.getAttribute('data-brand');
+
+            // Show/hide car cards based on the selected brand
+            carCards.forEach(card => {
+                if (brand === 'all' || card.getAttribute('data-brand') === brand) {
+                    card.style.display = 'block'; // Show the card
+                } else {
+                    card.style.display = 'none'; // Hide the card
+                }
+            });
+        });
+    });
     </script>
 </html>

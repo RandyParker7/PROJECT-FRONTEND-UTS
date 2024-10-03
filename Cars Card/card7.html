@@ -37,45 +37,45 @@
     </nav>
     <!-- Nav End -->
 
-    <div class="detail-wrapper">
-        <div class="display-card">
-            <div class="product-imgs">
-                <div class="img-display">
-                    <div class="img-showcase">
+    <div class="car-wrapper">
+        <div class="car-card">
+            <div class="car-imgs">
+                <div class="car-display">
+                    <div class="car-showcase">
                         <img src="../img/temerario1.jpg" alt="car image">
                     </div>
                 </div>
-                <div class="img-select">
-                    <div class="img-item">
+                <div class="car-select">
+                    <div class="car-item">
                         <a href="#" data-id="1">
                             <img src="../img/temerario1.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="2">
                             <img src="../img/temerario2.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="3">
                             <img src="../img/temerario3.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="4">
                             <img src="../img/temerario4.jpg" alt="car image">
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="product-content">
-                <h2 class="product-title">Lamborghini Temerario</h2>
+            <div class="car-content">
+                <h2 class="car-title">Lamborghini Temerario</h2>
 
-                <div class="product-price">
+                <div class="car-product">
                     <p class="car-price">Price: <span>Rp 9.378.297.400,00</span></p>
                 </div>
 
-                <div class="product-detail">
+                <div class="car-detail">
                     <h2>about this car: </h2>
                     <p>Lamborghini bertekad untuk memangkas emisi, meningkatkan tenaga, dan mengelektrifikasi setiap model dalam portofolionya. Itu berarti, mesin V10 5,2 liter Huracan harus dipensiunkan dan digantikan dengan turbocharger. Sebagai gantinya, Temerario mendapatkan mesin V8 4.0 liter twin-turbo bertenaga 789 hp dengan torsi 730 Nm dan 3 motor listrik bertenaga 3.8 kWh. Lebih besar dari Huracan V10 5,2 liter yang menghasilkan tenaga 631 hp dan torsi 600 Nm.</p>
                     <p>Dua motor berada di depan untuk menjadikannya berpenggerak all wheel drive dan menyediakan vektor torsi. Dapat juga disetting menjadi EV berpenggerak roda depan dalam mode Citta (kota). Motor ketiga yang dipasang di antara V8 dan transmisi 8-speed yang berfungsi sebagai generator starter dan mengisi kurva torsi hingga 300 Nm, yang seharusnya menutupi turbo lag. Jika digabungkan, mesinnya mampu menghasilkan tenaga 907 hp.</p>
@@ -117,11 +117,11 @@
         feather.replace();
     </script>
     <script>
-        document.querySelectorAll('.img-item a').forEach(item => {
+        document.querySelectorAll('.car-item a').forEach(item => {
             item.addEventListener('click', function(event) {
                 event.preventDefault(); // Prevent the default anchor behavior
                 const newImageSrc = this.querySelector('img').src; // Get the source of the clicked image
-                document.querySelector('.img-showcase img').src = newImageSrc; // Update the main image
+                document.querySelector('.car-showcase img').src = newImageSrc; // Update the main image
             });
         });
     </script>

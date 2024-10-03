@@ -37,45 +37,45 @@
     </nav>
     <!-- Nav End -->
 
-    <div class="detail-wrapper">
-        <div class="display-card">
-            <div class="product-imgs">
-                <div class="img-display">
-                    <div class="img-showcase">
+    <div class="car-wrapper">
+        <div class="car-card">
+            <div class="car-imgs">
+                <div class="car-display">
+                    <div class="car-showcase">
                         <img src="../img/countach1.jpg" alt="car image">
                     </div>
                 </div>
-                <div class="img-select">
-                    <div class="img-item">
+                <div class="car-select">
+                    <div class="car-item">
                         <a href="#" data-id="1">
                             <img src="../img/countach1.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="2">
                             <img src="../img/countach2.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="3">
                             <img src="../img/countach3.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="4">
                             <img src="../img/countach4.jpg" alt="car image">
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="product-content">
-                <h2 class="product-title">Lamborghini Countach LPI 800-4</h2>
+            <div class="car-content">
+                <h2 class="car-title">Lamborghini Countach LPI 800-4</h2>
 
-                <div class="product-price">
+                <div class="car-product">
                     <p class="car-price">Price: <span>Rp 40.326.000.000,00</span></p>
                 </div>
 
-                <div class="product-detail">
+                <div class="car-detail">
                     <h2>about this car: </h2>
                     <p>Countach LPI 800-4 memiliki profil moncong seperti Lamborghini terbaru tapi dipadukan dengan desain kotak-kotak khas 1980an. Desain lampu depan, bumper spoiler, dan gril mengambil inspirasi dari Countach edisi Quattrovalvole minus lampu pop-up. Selain di bagian depan, inspirasi Countach Quattrovalvole juga ditemukan pada fender yang dibuat trapesium, ventilasi area pintu berbentuk panah, dan scoop di garis bahu desain berundak.</p>
                     <p>Countach LPI 800-4 memiliki dasar dan mekanik yang sama dengan Sián FKP 37 yang diluncurkan pada tahun 2019. Mobil ini menggunakan monocoque serat karbon yang sama beserta powertrain hybrid ringan yang sama dengan output gabungan yang sedikit menurun sebesar 599 kW (814 PS; 803 hp) yang menggerakkan keempat roda. Mobil ini merupakan kombinasi dari mesin V12 6,5 liter naturally-aspirated yang diposisikan secara longitudinal (LP) yang dalam hal ini menghasilkan 574 kW (780 PS; 770 hp), bersama dengan motor listrik 48 volt yang menghasilkan tambahan 25 kW (34 PS; 34 hp) yang terletak di dalam transmisi manual otomatis 7-percepatan . Energi dari sistem pengereman regeneratif disimpan dalam superkapasitor yang lebih ringan dari baterai lithium-ion tradisional . Berat keringnya adalah 1.595 kg (3.516 lb), dengan persentase dibagi 43-57 depan-ke-belakang.
@@ -117,11 +117,11 @@
         feather.replace();
     </script>
     <script>
-        document.querySelectorAll('.img-item a').forEach(item => {
+        document.querySelectorAll('.car-item a').forEach(item => {
             item.addEventListener('click', function(event) {
                 event.preventDefault(); // Prevent the default anchor behavior
                 const newImageSrc = this.querySelector('img').src; // Get the source of the clicked image
-                document.querySelector('.img-showcase img').src = newImageSrc; // Update the main image
+                document.querySelector('.car-showcase img').src = newImageSrc; // Update the main image
             });
         });
     </script>

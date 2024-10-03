@@ -37,45 +37,45 @@
     </nav>
     <!-- Nav End -->
 
-    <div class="detail-wrapper">
-        <div class="display-card">
-            <div class="product-imgs">
-                <div class="img-display">
-                    <div class="img-showcase">
+    <div class="car-wrapper">
+        <div class="car-card">
+            <div class="car-imgs">
+                <div class="car-display">
+                    <div class="car-showcase">
                         <img src="../img/cayman1.jpg" alt="car image">
                     </div>
                 </div>
-                <div class="img-select">
-                    <div class="img-item">
+                <div class="car-select">
+                    <div class="car-item">
                         <a href="#" data-id="1">
                             <img src="../img/cayman1.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="2">
                             <img src="../img/cayman2.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="3">
                             <img src="../img/cayman3.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="4">
                             <img src="../img/cayman4.jpg" alt="car image">
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="product-content">
-                <h2 class="product-title">Porsche 718 Cayman GT4 RS</h2>
+            <div class="car-content">
+                <h2 class="car-title">Porsche 718 Cayman GT4 RS</h2>
 
-                <div class="product-price">
+                <div class="car-product">
                     <p class="car-price">Price: <span>Rp 6.800.000.000,00</span></p>
                 </div>
 
-                <div class="product-detail">
+                <div class="car-detail">
                     <h2>about this car: </h2>
                     <p>Cayman
                         First launched in 2005 for the 2006 model year, the Cayman is a coupé derived from Porsche's second and third generation Boxster roadster, styled in its first iteration by Pinky Lai. All Caymans up to 2012 were manufactured in Finland by Valmet Automotive. As Volkswagen assumed control of Porsche AG, production of Caymans and Boxsters after 2012 began in the former Karmann plant in Osnabrück, Germany, at the time owned by Volkswagen and also used for production of the 2012 Golf (Mk6) convertible.
@@ -120,11 +120,11 @@
         feather.replace();
     </script>
     <script>
-        document.querySelectorAll('.img-item a').forEach(item => {
+        document.querySelectorAll('.car-item a').forEach(item => {
             item.addEventListener('click', function(event) {
                 event.preventDefault(); // Prevent the default anchor behavior
                 const newImageSrc = this.querySelector('img').src; // Get the source of the clicked image
-                document.querySelector('.img-showcase img').src = newImageSrc; // Update the main image
+                document.querySelector('.car-showcase img').src = newImageSrc; // Update the main image
             });
         });
     </script>

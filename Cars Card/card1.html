@@ -37,45 +37,45 @@
     </nav>
     <!-- Nav End -->
 
-    <div class="detail-wrapper">
-        <div class="display-card">
-            <div class="product-imgs">
-                <div class="img-display">
-                    <div class="img-showcase">
+    <div class="car-wrapper">
+        <div class="car-card">
+            <div class="car-imgs">
+                <div class="car-display">
+                    <div class="car-showcase">
                         <img src="../img/senna1.jpg" alt="car image">
                     </div>
                 </div>
-                <div class="img-select">
-                    <div class="img-item">
+                <div class="car-select">
+                    <div class="car-item">
                         <a href="#" data-id="1">
                             <img src="../img/senna1.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="2">
                             <img src="../img/senna2.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="3">
                             <img src="../img/senna3.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="4">
                             <img src="../img/senna4.jpg" alt="car image">
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="product-content">
-                <h2 class="product-title">Mclaren Senna</h2>
+            <div class="car-content">
+                <h2 class="car-title">Mclaren Senna</h2>
 
-                <div class="product-price">
+                <div class="car-product">
                     <p class="car-price">Price: <span>Rp 22.250.602.000,00</span></p>
                 </div>
 
-                <div class="product-detail">
+                <div class="car-detail">
                     <h2>about this car: </h2>
                     <h3>Informasi</h3>
                     <p>Produsen: McLaren Automotive</p>
@@ -137,11 +137,11 @@
         feather.replace();
     </script>
     <script>
-        document.querySelectorAll('.img-item a').forEach(item => {
+        document.querySelectorAll('.car-item a').forEach(item => {
             item.addEventListener('click', function(event) {
                 event.preventDefault(); // Prevent the default anchor behavior
                 const newImageSrc = this.querySelector('img').src; // Get the source of the clicked image
-                document.querySelector('.img-showcase img').src = newImageSrc; // Update the main image
+                document.querySelector('.car-showcase img').src = newImageSrc; // Update the main image
             });
         });
     </script>

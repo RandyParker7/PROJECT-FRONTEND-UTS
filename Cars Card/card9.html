@@ -37,45 +37,45 @@
     </nav>
     <!-- Nav End -->
 
-    <div class="detail-wrapper">
-        <div class="display-card">
-            <div class="product-imgs">
-                <div class="img-display">
-                    <div class="img-showcase">
+    <div class="car-wrapper">
+        <div class="car-card">
+            <div class="car-imgs">
+                <div class="car-display">
+                    <div class="car-showcase">
                         <img src="../img/roadster1.jpg" alt="car image">
                     </div>
                 </div>
-                <div class="img-select">
-                    <div class="img-item">
+                <div class="car-select">
+                    <div class="car-item">
                         <a href="#" data-id="1">
                             <img src="../img/roadster1.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="2">
                             <img src="../img/roadster2.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="3">
                             <img src="../img/roadster3.jpg" alt="car image">
                         </a>
                     </div>
-                    <div class="img-item">
+                    <div class="car-item">
                         <a href="#" data-id="4">
                             <img src="../img/roadster4.jpg" alt="car image">
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="product-content">
-                <h2 class="product-title">Lamborghini Sián Roadster</h2>
+            <div class="car-content">
+                <h2 class="car-title">Lamborghini Sián Roadster</h2>
 
-                <div class="product-price">
+                <div class="car-product">
                     <p class="car-price">Price: <span>Rp 56.530.265.000,00</span></p>
                 </div>
 
-                <div class="product-detail">
+                <div class="car-detail">
                     <h2>about this car: </h2>
                     <p>Mengusung sistem hybrid, Lamborghini Sian Roadster mencangkok mesin V12 dan juga motor listrik 48 Volt membuat tenaganya makin buas. Betapa tidak, mesin V12 hasil pengembangan Lamborghini pada Sián mampu menghasilkan tenaga setara 785 daya kuda sekaligus menjadi yang terbesar sepanjang sejarah banteng Italia. Sián Roadster juga mendapat tambahan tenaga 34 daya kuda dari sistem hybridnya. Secara total Sian punya tenaga setara 819 daya kuda.</p>
                     <p>Tenaga tersebut disalurkan melalui transmisi ISR (Independent Shifting Roads) 7 percepatan ke penggerak 4 roda. Lamborghini Sián Roadster bisa berlari 0-100 km/jam dalam kurun waktu kurang dari 2,8 detik dan mencapai kecepatan maksimal lebih dari 350 km/jam. Berbeda dengan mobil hybrid lainnya, Sian tidak menggunakan baterai. Sebagai penggantinya sistem listrik Lamborghini menggunakan supercapacitor yang diklaim bisa memiliki energi lebih besar dari baterai biasa.</p>
@@ -116,11 +116,11 @@
         feather.replace();
     </script>
     <script>
-        document.querySelectorAll('.img-item a').forEach(item => {
+        document.querySelectorAll('.car-item a').forEach(item => {
             item.addEventListener('click', function(event) {
                 event.preventDefault(); // Prevent the default anchor behavior
                 const newImageSrc = this.querySelector('img').src; // Get the source of the clicked image
-                document.querySelector('.img-showcase img').src = newImageSrc; // Update the main image
+                document.querySelector('.car-showcase img').src = newImageSrc; // Update the main image
             });
         });
     </script>
