@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="/MyCSS/style.css">
+    <title>Car Detail</title>
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <!-- Nav Start -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo"><img src="img/logo.png" alt=""></a>
+
+        <div class="navbar-nav">
+            <a href="../index.html">Home</a>
+            <a href="../cars.html">Cars</a>
+            <a href="../event.html">Event & News</a>
+            <a href="../review.html">Car Review</a>
+            <a href="../guide.html">Car Buying Guide</a>
+        </div>
+
+        <div class="nav-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+
+
+    </nav>
+    <!-- Nav End -->
+    <div class="product-imgs">
+        <div class="img-display">
+            <div class="img-showcase">
+                <img src="/img/image3.png" alt="Gambar Mobil">
+            </div>
+        </div>
+    </div>
+    <div class="countdown">
+        <h2>Countdown to Event</h2>
+        <div class="countdown-timer">
+            <span id="days">00</span> hari
+            <span id="hours">00</span> jam
+            <span id="minutes">00</span> menit
+            <span id="seconds">00</span> detik
+        </div>
+    </div>
+    <section class="schedule">
+        <h1>Event Schedule</h1>
+        <p>October 2 - 6, 2024</p>
+        <p>October 1 - 5, 2025</p>
+        <h2>Event Hours</h2>
+        <ul>
+            <li>Wed - Sat: 7 AM - 6 PM</li>
+            <li>Sunday: 7 AM - 12 PM</li>
+        </ul>
+        <h2>Admission</h2>
+        <ul>
+            <li>Daily Wed - Sat: $13</li>
+            <li>Sunday: Free</li>
+            <li>Attendee Event Pass: $38</li>
+            <li>Kids 12 and Under: FREE</li>
+        </ul>
+        <p>*Online tickets discounted.</p>
+        <p>Daily General Parking: $10</p>
+        <h2>Event Guide</h2>
+        <ul>
+            <li>Map & Schedule</li>
+            <li>Location: Carlisle Fairgrounds, 1000 Bryn Mawr Rd, Carlisle, PA, 17013</li>
+            <li>Buy Tickets</li>
+        </ul>
+    </section>
+<!-- Footer Start-->
+<footer>
+    <div class="fol">
+        <p>FOLLOW US</p>
+        <a href="">Our Social Media</a>
+    </div>
+
+    <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+        <a href="../index.html">Home</a>
+        <a href="../cars.html">Cars</a>
+        <a href="../event.html">Event & News</a>
+        <a href="../review.html">Car Review</a>
+        <a href="../guide.html">Car Buying Guide</a>
+    </div>
+
+    <div class="credit">
+        <p>@2024<a href="">DriveLux</a></p>
+    </div>
+</footer>
+<!-- Footer End-->
+</body>
+    <!-- Icons -->
+    <script>
+        feather.replace();
+    </script>
+    <script>
+        document.querySelectorAll('.img-item a').forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.preventDefault(); 
+                const newImageSrc = this.querySelector('img').src; 
+                document.querySelector('.img-showcase img').src = newImageSrc; 
+            });
+        });
+        
+const countdownTimer = document.querySelector('.countdown-timer');
+const daysSpan = document.querySelector('#days');
+const hoursSpan = document.querySelector('#hours');
+const minutesSpan = document.querySelector('#minutes');
+const secondsSpan = document.querySelector('#seconds');
+
+const eventDate = new Date('2024-10-02T00:00:00');
+
+function countdown() {
+    const now = new Date();
+    const diff = eventDate - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    daysSpan.textContent = days.toString().padStart(2, '0');
+    hoursSpan.textContent = hours.toString().padStart(2, '0');
+    minutesSpan.textContent = minutes.toString().padStart(2, '0');
+    secondsSpan.textContent = seconds.toString().padStart(2, '0');
+
+    if (diff <= 0) {
+        clearInterval(countdownInterval);
+        countdownTimer.textContent = 'Event telah dimulai!';
+    }
+}
+
+const countdownInterval = setInterval(countdown, 1000);
+    </script>
+</html>
