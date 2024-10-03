@@ -1,0 +1,223 @@
+:root {
+    --primary: #030000; 
+    --bg: #fff; 
+    --accent: #bd0000; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: var(--primary);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .nav-extra {
+    position: absolute;
+    justify-content: space-between;
+    right: 7%;
+    color: var(--bg);
+}
+
+.navbar .navbar-logo {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+}
+
+.navbar .navbar-logo img {
+    height: 80px; 
+    max-width: 150px;
+}
+
+.navbar .navbar-nav a {
+    color: var(--bg);
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--accent);
+}
+
+.guide-membeli-mobil {
+    padding: 80px 5%;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.guide-membeli-mobil h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--bg);
+}
+
+.guide-membeli-mobil h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: var(--bg);
+}
+
+.guide-membeli-mobil p {
+    margin: 10px 0;
+    color: #ddd; 
+}
+
+.guide-membeli-mobil ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.sports-car-price-range {
+    margin: 40px 5%; 
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;           
+    flex-direction: column;  
+    align-items: center;     
+}
+
+.sports-car-price-range input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#sportsCarResult {
+    margin-top: 20px;
+    width: 100%; 
+    display: flex;           
+    flex-direction: column;  
+    align-items: center;     
+}
+
+#sportsCarResult h3 {
+    margin-bottom: 10px;
+    color: var(--bg);
+}
+
+#sportsCarResult div {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 90%; 
+    margin: 10px 0; 
+}
+
+#sportsCarResult img {
+    margin-left: 10px;
+    border-radius: 5px;
+    max-width: 300px; 
+    height: auto; 
+}
+
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+footer .fol {
+    font-size: 1.1rem;
+}
+
+footer .fol a {
+    color: #8a8888e5;
+}
+
+footer .socials {
+    padding: 1rem 0;
+}
+
+footer .socials a {
+    color: #fff;
+    margin: 1rem;
+}
+
+footer .links {
+    margin-bottom: 1.4rem;
+}
+
+footer .links a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+
+footer .credit {
+    font-size: 0.8rem;
+}
+
+footer .credit a {
+    color: var(--bg);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .navbar .navbar-nav {
+        flex-direction: column; 
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: black;
+        width: 100%; 
+        height: auto; 
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: #fff;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .guide-membeli-mobil {
+        padding: 40px 2%; 
+    }
+
+    .guide-membeli-mobil h1 {
+        font-size: 2rem; 
+    }
+
+    .guide-membeli-mobil h2 {
+        font-size: 1.5rem; 
+    }
+}
