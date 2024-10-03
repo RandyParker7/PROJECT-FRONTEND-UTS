@@ -181,24 +181,24 @@
 
     <!-- Filter -->
     <script>
-    // Select all filter buttons and car cards
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const carCards = document.querySelectorAll('.carscard');
+const filterButtons = document.querySelectorAll('.filter-btn');
+const carCards = document.querySelectorAll('.carscard');
 
-    // Add event listeners to filter buttons
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const brand = button.getAttribute('data-brand');
+// Add event listeners to filter buttons
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const brand = button.getAttribute('data-brand');
 
-            // Show/hide car cards based on the selected brand
-            carCards.forEach(card => {
-                if (brand === 'all' || card.getAttribute('data-brand') === brand) {
-                    card.style.display = 'block'; // Show the card
-                } else {
-                    card.style.display = 'none'; // Hide the card
-                }
-            });
+        // Filter cards based on the brand
+        carCards.forEach(card => {
+            if (brand === 'all' || card.getAttribute('data-brand') === brand) {
+                card.classList.remove('hidden');  // Show the card
+            } else {
+                card.classList.add('hidden');    // Hide the card
+            }
         });
     });
+});
+
     </script>
 </html>
