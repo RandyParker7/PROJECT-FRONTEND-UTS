@@ -27,30 +27,45 @@ function showSlides(n) {
 
 // Toggle
 const navbarNav = document.querySelector ('.navbar-nav');
+const hamburgerMenu = document.querySelector('#hamburger-menu');
 // ketika
 document.querySelector('#hamburger-menu').onclick = () => {
     navbarNav.classList.toggle('active');
 };
 
 //Toggle class active search form
-const searchForm = document.querySelector('.search-form');
-// const searchBox = document.querySelector('#search-box');
+const searchForm = document.querySelector('.search-form'); 
+const searchBox = document.querySelector('#search-box');
+const searchButton = document.querySelector('#search-button');
 
 document.querySelector('#search-button').onclick = (e) => {
     searchForm.classList.toggle('active');
-    // searchBox.focus();
-    // e.preventDefault();
+    searchBox.focus();
+    e.preventDefault();
 };
 
 // Klik di luar side bar untuk hilangkan hamburger enu nav
-const hamburger = document.querySelector('#hamburger-menu');
-const search = document.querySelector('#search-button');
-
 document.addEventListener('click', function(e){
     if(!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
         navbarNav.classList.remove('active');
     }
     if(!search.contains(e.target) && !searchForm.contains(e.target)) {
         searchForm.classList.remove('active');
+    }
+});
+
+document.getElementById('search-box').addEventListener('input', function() {
+    let input = document.getElementById('search-box').value.toLowerCase(); 
+    let cards = document.getElementsByClassName('carscard'); 
+    
+
+    for (let i = 0; i < cards.length; i++) {
+        let cardTitle = cards[i].getElementsByTagName('h1')[0].textContent.toLowerCase(); 
+        
+        if (cardTitle.includes(input)) {
+            cards[i].style.display = ""; 
+        } else {
+            cards[i].style.display = "none"; 
+        }
     }
 });
