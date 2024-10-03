@@ -45,6 +45,7 @@ body {
     right: 0;
     z-index: 9999;
 }
+
 .navbar .nav-extra {
     position: absolute;
     justify-content: space-between;
@@ -732,8 +733,154 @@ body , html{
 }
 /* Cars Filter End */
 
+#hamburger-menu{
+    display: none;
+}
+
+@media (max-width: 1080px) {
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: black;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: #fff;
+        display: inline-block;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    
+    .navbar .nav-extra {
+        position: absolute;
+        justify-content: space-between;
+        top: 3rem;
+        right: 7%;
+        color: var(--bg);
+    }
+
+    .navbar .navbar-logo {
+        position: absolute;
+        top: 4.5rem;
+        left: 7%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .navbar .navbar-logo img {
+        height: 90px;
+        max-width: 150px;
+        margin-left: 10px;
+    }
+}
+
 /* Responsive styling */
 @media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: black;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: #fff;
+        display: inline-block;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    
+    .navbar .nav-extra {
+        position: absolute;
+        justify-content: space-between;
+        top: 3rem;
+        right: 7%;
+        color: var(--bg);
+    }
+
+    .navbar .navbar-logo {
+        position: absolute;
+        top: 4.5rem;
+        left: 7%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .navbar .navbar-logo img {
+        height: 70px;
+        max-width: 150px;
+        margin-left: 10px;
+    }
+
+
+    .slider-input {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .slider {
+        max-width: 1040px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8rem;
+    }
+    
+    .slider-img {
+        background-size: auto 110%;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 10px;
+        position: relative;
+        height: 250px;
+        border-radius: 100px;
+        flex: 0.1;
+        overflow: hidden;
+        transition: flex 0.5s ease-in-out,border-radius 1s ease-in-out;
+        margin-top: 8rem;
+        margin-bottom: 15rem;
+    }
+    
+    .slider-img:hover {
+        flex: 0.8;
+        border-radius: 40px;
+    }
+
     .product-imgs, .article {
         margin: 20px;
         padding: 15px;
@@ -745,5 +892,12 @@ body , html{
 
     .article h2 {
         font-size: 20px;
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
     }
 }

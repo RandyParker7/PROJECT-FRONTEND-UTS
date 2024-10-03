@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="../MyCSS/style.css">
+    <title>Car Detail</title>
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <!-- Nav Start -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo"><img src="img/logo.png" alt=""></a>
+
+        <div class="navbar-nav">
+            <a href="../index.html">Home</a>
+            <a href="../cars.html">Cars</a>
+            <a href="../event.html">Event & News</a>
+            <a href="../review.html">Car Review</a>
+            <a href="../guide.html">Car Buying Guide</a>
+        </div>
+
+        <div class="nav-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+
+
+    </nav>
+    <!-- Nav End -->
+
+    <div class="car-wrapper">
+        <div class="car-card">
+            <div class="car-imgs">
+                <div class="car-display">
+                    <div class="car-showcase">
+                        <img src="../img/tesla1.jpg" alt="car image">
+                    </div>
+                </div>
+                <div class="car-select">
+                    <div class="car-item">
+                        <a href="#" data-id="1">
+                            <img src="../img/tesla1.jpg" alt="car image">
+                        </a>
+                    </div>
+                    <div class="car-item">
+                        <a href="#" data-id="2">
+                            <img src="../img/tesla2.jpg" alt="car image">
+                        </a>
+                    </div>
+                    <div class="car-item">
+                        <a href="#" data-id="3">
+                            <img src="../img/tesla3.jpg" alt="car image">
+                        </a>
+                    </div>
+                    <div class="car-item">
+                        <a href="#" data-id="4">
+                            <img src="../img/tesla4.jpg" alt="car image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-content">
+                <h2 class="car-title">Jeep Gladiator Rubicon</h2>
+
+                <div class="car-product">
+                    <p class="car-price">Price: <span>Rp 2.135.000.000</span></p>
+                </div>
+
+                <div class="car-detail">
+                    <h2>about this car: </h2>
+                    <p>The Jeep Gladiator is a mid-size pickup truck manufactured by the Jeep division of Stellantis North America (formerly FCA US). It was introduced at the 2018 Los Angeles Auto Show on November 28, 2018, and went on sale in the spring of 2019 as a 2020 model. 
+                        Based on the same platform as the Wrangler JL, the Gladiator is Jeep's first pickup truck since the Comanche was discontinued in 1992,
+                        although the very similar dual-cab AEV Brute was custom made using the Wrangler platform from 2013 until 2017 by American Expedition Vehicles under license.
+                        Jeep Gladiator was marketed in Australia[4] and New Zealand[5] as the first markets outside the Americas. It is also officially available in North America, parts of South America, parts of Europe, China, Japan, South Korea, parts of Southeast Asia, the Middle East, Israel, and South Africa.</p>
+                    <h3>Body and Chassis</h3>
+                    <p>Class:	Mid-size pickup truck</p>
+                    <p>Body style:	4-door pickup truck with removable roof and doors</p>
+                    <p>Layout:	Front-engine, four-wheel-drive</p>
+                    <h3>Powertrain</h3>
+                    <p>Engine	
+                        3.6 L Pentastar V6 (gasoline)
+                        3.0 L EcoDiesel V6 turbo (diesel)
+                        2.0 L GME T4 turbo I4 (4xe, 2025-present)</p>
+                    <p>Transmission	6-speed Aisin AL6 (D478) manual
+                        8-speed ZF 8HP automatic</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer Start-->
+<footer>
+    <div class="fol">
+        <p>FOLLOW US</p>
+        <a href="">Our Social Media</a>
+    </div>
+
+    <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+        <a href="../index.html">Home</a>
+        <a href="../cars.html">Cars</a>
+        <a href="../event.html">Event & News</a>
+        <a href="../review.html">Car Review</a>
+        <a href="../guide.html">Car Buying Guide</a>
+    </div>
+
+    <div class="credit">
+        <p>@2024<a href="">DriveLux</a></p>
+    </div>
+</footer>
+<!-- Footer End-->
+</body>
+    <!-- Icons -->
+    <script>
+        feather.replace();
+    </script>
+    <script>
+        document.querySelectorAll('.car-item a').forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default anchor behavior
+                const newImageSrc = this.querySelector('img').src; // Get the source of the clicked image
+                document.querySelector('.car-showcase img').src = newImageSrc; // Update the main image
+            });
+        });
+    </script>
+</html>
