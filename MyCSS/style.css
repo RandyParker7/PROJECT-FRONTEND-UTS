@@ -500,7 +500,7 @@ p{
     width: 50%;
 }
 .image-col{
-    width: 60%;
+    width: 100%;
 }
 .tours .image-gallery{
     display: flex;
@@ -509,7 +509,7 @@ p{
     align-items: center;
 }
 .image-gallery img{
-   max-width: 300px;
+   max-width: 310px;
     margin: 10px;
 }
 .content-col h1{
