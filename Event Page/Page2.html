@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="/MyCSS/style.css">
+    <title>Car Detail</title>
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <!-- Nav Start -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo"><img src="img/logo.png" alt=""></a>
+
+        <div class="navbar-nav">
+            <a href="../index.html">Home</a>
+            <a href="../cars.html">Cars</a>
+            <a href="../event.html">Event & News</a>
+            <a href="../review.html">Car Review</a>
+            <a href="../guide.html">Car Buying Guide</a>
+        </div>
+
+        <div class="nav-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+
+
+    </nav>
+    <!-- Nav End -->
+    <div class="product-imgs">
+        <div class="img-display">
+            <div class="img-showcase">
+                <img src="/img/image2.jpg" alt="car image">
+            </div>
+        </div>
+        <section class="article">
+            <h1>Volkswagen Integrates ChatGPT into IDA Voice Assistant</h1>
+            <p>The well-known AI tool will complement Volkswagen's own online voice assistant IDA, allowing customers to communicate with their vehicle using natural language and receive a range of additional information.</p>
+            
+            <h2>Features of ChatGPT in Volkswagen Vehicles</h2>
+            <ul>
+                <li>Available in all new ID. models, as well as in the new Golf, new Tiguan, and new Passat</li>
+                <li>Can be accessed using the IDA voice assistant</li>
+                <li>Offers a range of new options that go far beyond the voice control previously available</li>
+                <li>Allows customers to have search results read out to them and interact with the car using natural language</li>
+            </ul>
+            
+            <h2>Quote from Kai Grünitz, Member of the Brand Board of Management responsible for Development</h2>
+            <p>"Volkswagen has a long tradition of democratising technologies. As a volume manufacturer, we make these technologies accessible to large numbers of people. By seamlessly integrating ChatGPT into the backend of our voice assistant, we are now offering drivers the opportunity to use this artificial intelligence on a daily basis, thus underlining how innovative our products are."</p>
+            
+            <h2>How ChatGPT Works in Volkswagen Vehicles</h2>
+            <p>Current Volkswagen models already allow users to control the infotainment, navigation, and climate control systems using the IDA online voice assistant. The vehicle is also able to answer questions about various topics. But with the introduction of ChatGPT, the possibilities have expanded significantly: for example, AI can provide information on tourist attractions, report on past football tournaments, or help solve maths problems.</p>
+            
+            <h2>Easy to Use and Secure</h2>
+            <p>Volkswagen customers with an existing account for VW Connect/VW Connect Plus can use the IDA voice assistant as usual – they do not require additional access or an additional app. The digital assistant is launched by saying “Hello IDA” or pressing the button on the steering wheel. Only if a query cannot be answered by the Volkswagen system is it forwarded anonymously to ChatGPT; the answer is then provided in the familiar Volkswagen voice. At no point does ChatGPT gain access to vehicle data. Questions and answers are deleted immediately in order to ensure optimal data protection.</p>
+            
+            <h2>Language Availability</h2>
+            <p>The technology is currently available in the system languages English (US), English (UK), Spanish, Czech, and German.</p>
+        </section>
+<!-- Footer Start-->
+<footer>
+    <div class="fol">
+        <p>FOLLOW US</p>
+        <a href="">Our Social Media</a>
+    </div>
+
+    <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+        <a href="../index.html">Home</a>
+        <a href="../cars.html">Cars</a>
+        <a href="../event.html">Event & News</a>
+        <a href="../review.html">Car Review</a>
+        <a href="../guide.html">Car Buying Guide</a>
+    </div>
+
+    <div class="credit">
+        <p>@2024<a href="">DriveLux</a></p>
+    </div>
+</footer>
+<!-- Footer End-->
+</body>
+    <!-- Icons -->
+    <script>
+        feather.replace();
+    </script>
+    <script>
+        document.querySelectorAll('.img-item a').forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default anchor behavior
+                const newImageSrc = this.querySelector('img').src; // Get the source of the clicked image
+                document.querySelector('.img-showcase img').src = newImageSrc; // Update the main image
+            });
+        });
+    </script>
+</html>

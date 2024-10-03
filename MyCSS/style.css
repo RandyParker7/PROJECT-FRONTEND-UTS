@@ -419,7 +419,7 @@ footer .credit a {
     font-weight: 700;
 }
 /* Footer End */
-/*  Event */
+/* Event */
 section {
     width: 80%;
     margin: 80px auto;
@@ -428,21 +428,14 @@ section {
 .title {
     text-align: center;
     font-size: 4vmin;
-    color: white;
-}
-
-.row .col img {
-    width: 600px; 
-    height: 300px;  
-    object-fit: cover; 
-    border-radius: 10px; 
+    color: #fff;
 }
 
 .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px; 
+    gap: 20px;
     width: 100%;
 }
 
@@ -452,67 +445,93 @@ section {
     align-content: center;
 }
 
-.events .row{
-    margin-top: 50px;
+.events .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-h4{
+.events .col {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.events .col img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.events .col h4 {
     font-size: 3vmin;
-    color:white;
+    color: #fff;
     margin: 20px auto;
 }
-p{
+
+.events .col p {
     color: #717171;
     padding: 0 40px;
 }
 
-.events .ctn{
+.events .ctn {
     margin-top: 30px;
 }
 
-.explore{
+.explore {
     width: 100%;
     height: 80vh;
-    background-image: url('https://c.wallhere.com/photos/00/0e/2012_Ferrari_599XX_Evoluzione_netcarshow_netcar_car_images_car_photo-391423.jpg!d') ;
+    background-image: url('https://c.wallhere.com/photos/00/0e/2012_Ferrari_599XX_Evoluzione_netcarshow_netcar_car_images_car_photo-391423.jpg!d');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
 }
-.explore-content{
+
+.explore-content {
     width: 50%;
     padding: 50px;
 }
-.explore-content h1{
+
+.explore-content h1 {
     font-size: 7vmin;
     margin: 40px;
 }
-.explore-content p{
+
+.explore-content p {
     color: rgba(225, 221, 221);
 }
-.explore-content .ctn{
+
+.explore-content .ctn {
     margin-top: 40px;
 }
-.content-col{
+
+.content-col {
     width: 40%;
 }
-.tours .row .col{
+
+.tours .row .col {
     width: 50%;
 }
-.image-col{
+
+.image-col {
     width: 100%;
 }
-.tours .image-gallery{
+
+.tours .image-gallery {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
 }
-.image-gallery img{
-   max-width: 310px;
+
+.image-gallery img {
+    max-width: 310px;
     margin: 10px;
 }
-.content-col h1{
+
+.content-col h1 {
     font-size: 7vmin;
     color: #fff;
 }
@@ -626,4 +645,79 @@ body , html{
     opacity: 0.9;
 }
 /* Read More Cars End */
+/* Event page */
+/* Container for the car image and article content */
+.product-imgs, .article {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #000000;
+    box-shadow: 0 4px 8px rgb(255, 255, 250);
+    border-radius: 10px;
+}
 
+/* Image showcase */
+.img-display {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.img-showcase img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the article */
+.article h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+.article h2 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.article p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #fdfdfd;
+}
+
+.article ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.article ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.article ul li strong {
+    color: #000;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .product-imgs, .article {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .article h1 {
+        font-size: 24px;
+    }
+
+    .article h2 {
+        font-size: 20px;
+    }
+}
