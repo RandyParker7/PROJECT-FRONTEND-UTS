@@ -601,7 +601,6 @@ ul{
 }
 .active{
     color: white;
-    text-decoration: underline;
     font-weight: bold;
 }
 body , html{
@@ -801,7 +800,7 @@ body , html{
 
     .navbar .navbar-nav {
         position: absolute;
-        top: 100%;
+        top: 1%;
         right: -100%;
         background-color: black;
         width: 30rem;
@@ -942,7 +941,14 @@ body , html{
         font-size: 2rem;
     }
 
-    
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
     .navbar .nav-extra {
         position: absolute;
         justify-content: space-between;
