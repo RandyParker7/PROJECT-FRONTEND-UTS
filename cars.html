@@ -221,7 +221,7 @@
     </script>
 
     <script src="script.js"></script>
-    <!-- Filter -->
+
     <script>
 
 // Toggle
@@ -243,63 +243,36 @@ document.querySelector('#search-button').onclick = (e) => {
     e.preventDefault();
 };
 
-    // Tombol Filter
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const carCardsContainer = document.querySelector('.cardcontainer');
-    const carCards = Array.from(document.querySelectorAll('.carscard'));
+    // Fungsi filter
+    const originalCarCards = Array.from(document.querySelectorAll('.carscard'));
 
-    // Penunjuk tombol filter yang aktif
-    function updateActiveButton(activeButton) {
-        filterButtons.forEach(button => {
-            if (button === activeButton) {
-                button.classList.add('active');
+    function filterCars(brand) {
+        originalCarCards.forEach(card => {
+            if (brand === 'all' || card.getAttribute('data-brand') === brand) {
+                card.style.display = "";
             } else {
-                button.classList.remove('active');
+                card.style.display = "none";
             }
         });
     }
 
+    const filterButtons = document.querySelectorAll('.filter-btn');
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             const brand = button.getAttribute('data-brand');
-
-            while (carCardsContainer.firstChild) {
-                carCardsContainer.removeChild(carCardsContainer.firstChild);
-            }
-
-            carCards.forEach(card => {
-                if (brand === 'all' || card.getAttribute('data-brand') === brand) {
-                    const newCard = card.cloneNode(true);
-                    carCardsContainer.appendChild(newCard);
-                }
-            });
-
+            filterCars(brand);
             updateActiveButton(button);
         });
     });
 
-    carCards.forEach(card => {
-        carCardsContainer.appendChild(card.cloneNode(true));
-    });
+    function updateActiveButton(activeButton) {
+        filterButtons.forEach(button => {
+            button.classList.remove('active');
+        });
+        activeButton.classList.add('active');
+    }
 
-    // Menyalakan filter All saat pertama kali load
-    document.querySelector('.filter-btn[data-brand="all"]').classList.add('active');
-
-    document.getElementById('search-box').addEventListener('input', function() {
-        let input = document.getElementById('search-box').value.toLowerCase(); 
-        let cards = document.getElementsByClassName('carscard'); 
-        
-
-        for (let i = 0; i < cards.length; i++) {
-            let cardTitle = cards[i].getElementsByTagName('h1')[0].textContent.toLowerCase(); 
-            
-            if (cardTitle.includes(input)) {
-                cards[i].style.display = ""; 
-            } else {
-                cards[i].style.display = "none"; 
-            }
-        }
-    });
+    filterCars('all');
 
     </script>
 </html>
