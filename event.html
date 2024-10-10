@@ -6,7 +6,7 @@
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="MyCSS/style.css">
-    <title>Car Buying Guide</title>
+    <title>Cars</title>
     
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,6 @@
     
 </head>
 <body>
-    
     <!-- Nav Start -->
     <nav class="navbar">
         <a href="#" class="navbar-logo"><img src="img/logo.png" alt=""></a>
@@ -23,19 +22,27 @@
         <div class="navbar-nav">
             <a href="index.html">Home</a>
             <a href="cars.html">Cars</a>
-            <a href="event.html">Event & News</a>
+            <a href="#">Event & News</a>
             <a href="review.html">Car Review</a>
-            <a href="#guide">Car Buying Guide</a>
+            <a href="guide.html">Car Buying Guide</a>
         </div>
 
+        <!-- Navbar Extra (search, hamburger menu) -->
         <div class="nav-extra">
             <a href="#" id="search-button"><i data-feather="search"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
+        <!-- Navbar Extra-->
 
-
+        <!-- Search Form Start -->
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box"><i data-feather="search"></i></label>
+        </div>
+        <!-- Search Form End -->
     </nav>
     <!-- Nav End -->
+
     <header>
         <div class="header-content">
             <h2>Explore Cars event 2024</h2>
@@ -82,6 +89,7 @@
         </div>
     </div>
 </section>
+    
 <!-- Footer Start-->
 <footer>
     <div class="fol">
@@ -97,8 +105,8 @@
 
     <div class="links">
         <a href="index.html">Home</a>
-        <a href="cars.html">Cars</a>
-        <a href="#">Event & News</a>
+        <a href="#">Cars</a>
+        <a href="event.html">Event & News</a>
         <a href="review.html">Car Review</a>
         <a href="guide.html">Car Buying Guide</a>
     </div>
@@ -115,36 +123,42 @@
         feather.replace();
     </script>
 
-
     <script>
-        // Toggle
-        const navbarNav = document.querySelector ('.navbar-nav');
-        // ketika
-        document.querySelector('#hamburger-menu').onclick = () => {
-            navbarNav.classList.toggle('active');
-        };
 
-        //Toggle class active search form
-        const searchForm = document.querySelector('.search-form');
-        // const searchBox = document.querySelector('#search-box');
+// Toggle
+const navbarNav = document.querySelector ('.navbar-nav');
+const hamburgerMenu = document.querySelector('#hamburger-menu');
+// ketika
+document.querySelector('#hamburger-menu').onclick = () => {
+    navbarNav.classList.toggle('active');
+};
 
-        document.querySelector('#search-button').onclick = (e) => {
-            searchForm.classList.toggle('active');
-            // searchBox.focus();
-            // e.preventDefault();
-        };
+//Toggle class active search form
+const searchForm = document.querySelector('.search-form'); 
+const searchBox = document.querySelector('#search-box');
+const searchButton = document.querySelector('#search-button');
 
-        // Klik di luar side bar untuk hilangkan hamburger enu nav
-        const hamburger = document.querySelector('#hamburger-menu');
-        const search = document.querySelector('#search-button');
+document.querySelector('#search-button').onclick = (e) => {
+    searchForm.classList.toggle('active');
+    searchBox.focus();
+    e.preventDefault();
+};
 
-        document.addEventListener('click', function(e){
-            if(!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
-                navbarNav.classList.remove('active');
-            }
-            if(!search.contains(e.target) && !searchForm.contains(e.target)) {
-                searchForm.classList.remove('active');
-            }
-        });
+    document.getElementById('search-box').addEventListener('input', function() {
+    let input = document.getElementById('search-box').value.toLowerCase(); 
+    let cards = document.getElementsByClassName('carscard'); 
+    
+
+    for (let i = 0; i < cards.length; i++) {
+        let cardTitle = cards[i].getElementsByTagName('h1')[0].textContent.toLowerCase(); 
+        
+        if (cardTitle.includes(input)) {
+            cards[i].style.display = ""; 
+        } else {
+            cards[i].style.display = "none"; 
+        }
+    }
+});
+
     </script>
 </html>

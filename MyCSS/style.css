@@ -907,6 +907,8 @@ body , html{
     margin: 0 10px;
 }
 
+
+
 /* Responsive styling */
 @media (max-width: 768px) {
     html {
