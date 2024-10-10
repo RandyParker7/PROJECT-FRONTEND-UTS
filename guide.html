@@ -114,10 +114,11 @@
     <!-- Icons -->
     <script>
         feather.replace();
+        
     </script>
 
     <script>
-
+        
 // Toggle
 const navbarNav = document.querySelector ('.navbar-nav');
 const hamburgerMenu = document.querySelector('#hamburger-menu');
@@ -153,5 +154,44 @@ document.querySelector('#search-button').onclick = (e) => {
     }
 });
 
+    </script>
+    <script>
+        
+        // Update price value from range input
+        const priceRange = document.getElementById('priceRange');
+        const priceValue = document.getElementById('priceValue');
+        
+        priceRange.addEventListener('input', function() {
+            priceValue.textContent = `$${this.value}`;
+        });
+        
+        // Sports cars data with images
+        const sportsCars = [
+            { name: "Mclaren Senna", price: 1000000, image: "https://www.carscoops.com/wp-content/uploads/2019/12/McLaren-Senna-.jpg" },
+            { name: "Porsche 911", price: 120000, image: "https://wallpapercave.com/wp/wp2430932.jpg" },
+            { name: "Chevrolet Corvette", price: 70000, image: "https://bringatrailer.com/wp-content/uploads/2020/10/2019_chevrolet_corvette_zr1_1608127364d768c91b944-DSC_8273.jpg" },
+            { name: "Lamborghini Huracan", price: 300000, image: "https://images.hdqwalls.com/download/lamborghini-huracan-lb-performance-6h-3840x2160.jpg" },
+            { name: "Ford Mustang", price: 45000, image: "https://www.hdcarwallpapers.com/walls/2019_ford_series_1_mustang_rtr_4k-HD.jpg" },
+            { name: "Nissan GT-R", price: 115000, image: "https://www.hdcarwallpapers.com/walls/nissan_gt_r_nismo_2015-HD.jpg" },
+            { name: "Aston Martin Vantage", price: 140000, image: "https://tse3.mm.bing.net/th?id=OIP.oyZCtOMvduO5k-VaurzvwwHaEj&pid=Api&P=0&h=220" }, 
+        ];
+    
+        document.getElementById('showSportsCars').onclick = function () {
+            const maxPrice = parseInt(priceRange.value);
+            const resultContainer = document.getElementById('sportsCarResult');
+            resultContainer.innerHTML = '';  const affordableSportsCars = sportsCars.filter(car => car.price <= maxPrice);
+            if (affordableSportsCars.length > 0) {
+                resultContainer.innerHTML = '<h3>Mobil Sport yang Anda dapatkan:</h3>';
+                affordableSportsCars.forEach(car => {
+                    resultContainer.innerHTML += `
+                        <div style="margin-bottom: 10px;">
+                            <p>${car.name} - $${car.price}</p>
+                            <img src="${car.image}" alt="${car.name}" style="width: 200px; height: auto;">
+                        </div>`;
+                });
+            } else {
+                resultContainer.innerHTML = '<p>Tidak ada mobil sport dalam rentang harga ini.</p>';
+            }
+        };
     </script>
 </html>
