@@ -15,7 +15,6 @@
     
 </head>
 <body>
-    
     <!-- Nav Start -->
     <nav class="navbar">
         <a href="#" class="navbar-logo"><img src="img/logo.png" alt=""></a>
@@ -244,67 +243,63 @@ document.querySelector('#search-button').onclick = (e) => {
     e.preventDefault();
 };
 
-// Filter Button
-const filterButtons = document.querySelectorAll('.filter-btn');
-const carCardsContainer = document.querySelector('.cardcontainer');
-const carCards = Array.from(document.querySelectorAll('.carscard')); // Convert NodeList to Array
+    // Tombol Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const carCardsContainer = document.querySelector('.cardcontainer');
+    const carCards = Array.from(document.querySelectorAll('.carscard'));
 
-// Function to update the filter buttons
-function updateActiveButton(activeButton) {
-    filterButtons.forEach(button => {
-        if (button === activeButton) {
-            button.classList.add('active'); // Add active class to clicked button
-        } else {
-            button.classList.remove('active'); // Remove active class from others
-        }
-    });
-}
-
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const brand = button.getAttribute('data-brand');
-
-        // Remove all cards
-        while (carCardsContainer.firstChild) {
-            carCardsContainer.removeChild(carCardsContainer.firstChild);
-        }
-
-        // Create and append filtered cards
-        carCards.forEach(card => {
-            if (brand === 'all' || card.getAttribute('data-brand') === brand) {
-                const newCard = card.cloneNode(true);
-                carCardsContainer.appendChild(newCard);
+    // Penunjuk tombol filter yang aktif
+    function updateActiveButton(activeButton) {
+        filterButtons.forEach(button => {
+            if (button === activeButton) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
             }
         });
-
-        // Update active button
-        updateActiveButton(button);
-    });
-});
-
-// Initial rendering of all cards
-carCards.forEach(card => {
-    carCardsContainer.appendChild(card.cloneNode(true));
-});
-
-// Set the "All" button as active on page load
-document.querySelector('.filter-btn[data-brand="all"]').classList.add('active');
-
-document.getElementById('search-box').addEventListener('input', function() {
-    let input = document.getElementById('search-box').value.toLowerCase(); 
-    let cards = document.getElementsByClassName('carscard'); 
-    
-
-    for (let i = 0; i < cards.length; i++) {
-        let cardTitle = cards[i].getElementsByTagName('h1')[0].textContent.toLowerCase(); 
-        
-        if (cardTitle.includes(input)) {
-            cards[i].style.display = ""; 
-        } else {
-            cards[i].style.display = "none"; 
-        }
     }
-});
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const brand = button.getAttribute('data-brand');
+
+            while (carCardsContainer.firstChild) {
+                carCardsContainer.removeChild(carCardsContainer.firstChild);
+            }
+
+            carCards.forEach(card => {
+                if (brand === 'all' || card.getAttribute('data-brand') === brand) {
+                    const newCard = card.cloneNode(true);
+                    carCardsContainer.appendChild(newCard);
+                }
+            });
+
+            updateActiveButton(button);
+        });
+    });
+
+    carCards.forEach(card => {
+        carCardsContainer.appendChild(card.cloneNode(true));
+    });
+
+    // Menyalakan filter All saat pertama kali load
+    document.querySelector('.filter-btn[data-brand="all"]').classList.add('active');
+
+    document.getElementById('search-box').addEventListener('input', function() {
+        let input = document.getElementById('search-box').value.toLowerCase(); 
+        let cards = document.getElementsByClassName('carscard'); 
+        
+
+        for (let i = 0; i < cards.length; i++) {
+            let cardTitle = cards[i].getElementsByTagName('h1')[0].textContent.toLowerCase(); 
+            
+            if (cardTitle.includes(input)) {
+                cards[i].style.display = ""; 
+            } else {
+                cards[i].style.display = "none"; 
+            }
+        }
+    });
 
     </script>
 </html>

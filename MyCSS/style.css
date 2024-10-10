@@ -1026,3 +1026,28 @@ body , html{
     }
     
 }
+
+/* Halaman Cars dan Car review */
+@media (max-width: 1200px) {
+    .cardcontainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 1080px) {
+    .cardcontainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .reviewvid{
+        width: 600px;
+        height: 300px;
+    }
+}
+@media (max-width: 768px) {
+    .cardcontainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .reviewvid{
+        width: 400px;
+        height: 200px;
+    }
+}
