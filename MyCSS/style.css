@@ -587,6 +587,59 @@ section {
     font-size: 7vmin;
     color: #fff;
 }
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+    .events .row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .explore-content {
+        width: 60%;
+    }
+    .content-col {
+        width: 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .events .row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .explore-content {
+        width: 80%;
+    }
+    .content-col {
+        width: 60%;
+    }
+    .image-gallery img {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .explore-content {
+        width: 90%;
+    }
+    .content-col {
+        width: 80%;
+    }
+    .image-gallery img {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .explore-content {
+        width: 100%;
+    }
+    .content-col {
+        width: 100%;
+    }
+    .image-gallery img {
+        max-width: 150px;
+    }
+}
 /*global*/
 *{
     margin: 0;
@@ -601,6 +654,7 @@ ul{
 }
 .active{
     color: white;
+    text-decoration: underline;
     font-weight: bold;
 }
 body , html{
@@ -800,7 +854,7 @@ body , html{
 
     .navbar .navbar-nav {
         position: absolute;
-        top: 1%;
+        top: 100%;
         right: -100%;
         background-color: black;
         width: 30rem;
@@ -890,6 +944,119 @@ body , html{
 .schedule ul li strong {
     color: #000;
 }
+/* Guide Section Styles */
+
+.guide-membeli-mobil {
+    padding: 80px 5%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the section */
+    text-align: center; /* Center-align text */
+  }
+  
+  .guide-membeli-mobil h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center; /* Ensure title is centered */
+  }
+  
+  .guide-membeli-mobil h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #fff;
+    text-align: center; /* Center the subheadings */
+  }
+  
+  .guide-membeli-mobil p {
+    margin: 10px 0;
+    color: #ddd;
+    text-align: justify; /* Justify text */
+  }
+  
+  .guide-membeli-mobil ul {
+    margin: 10px 0;
+    padding-left: 0;
+    list-style-position: inside;
+    color: #ddd;
+    text-align: left; /* Left-align list items */
+  }
+  
+  .guide-membeli-mobil ul li {
+    margin-bottom: 10px; /* Add space between list items */
+  }
+  
+  .sports-car-price-range {
+    margin: 40px 5%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center-align text */
+  }
+  
+  .sports-car-price-range input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  #sportsCarResult {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #sportsCarResult h3 {
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  #sportsCarResult div {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 10px 0;
+    flex-direction: column; /* Make divs stack vertically */
+  }
+  
+  #sportsCarResult img {
+    margin-top: 10px;
+    border-radius: 5px;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  /* Responsif Styles */
+  
+  @media (max-width: 768px) {
+    .guide-membeli-mobil {
+      padding: 50px 3%;
+    }
+  
+    .guide-membeli-mobil h1 {
+      font-size: 2rem;
+    }
+  
+    .guide-membeli-mobil h2 {
+      font-size: 1.8rem;
+    }
+  
+    .sports-car-price-range {
+      padding: 20px 5%;
+    }
+  
+    #sportsCarResult img {
+      max-width: 100%;
+    }
+  }
 /* countdown */
 .countdown {
     text-align: center;
@@ -905,8 +1072,6 @@ body , html{
 .countdown-timer span {
     margin: 0 10px;
 }
-
-
 
 /* Responsive styling */
 @media (max-width: 768px) {
@@ -941,14 +1106,7 @@ body , html{
         font-size: 2rem;
     }
 
-    .navbar .navbar-nav a::after {
-        transform-origin: 0 0;
-    }
-
-    .navbar .navbar-nav a:hover::after {
-        transform: scaleX(0.2);
-    }
-
+    
     .navbar .nav-extra {
         position: absolute;
         justify-content: space-between;
