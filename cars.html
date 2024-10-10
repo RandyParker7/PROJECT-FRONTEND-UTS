@@ -220,8 +220,6 @@
         feather.replace();
     </script>
 
-    <script src="script.js"></script>
-
     <script>
 
 // Toggle
@@ -273,6 +271,22 @@ document.querySelector('#search-button').onclick = (e) => {
     }
 
     filterCars('all');
+
+    document.getElementById('search-box').addEventListener('input', function() {
+    let input = document.getElementById('search-box').value.toLowerCase(); 
+    let cards = document.getElementsByClassName('carscard'); 
+    
+
+    for (let i = 0; i < cards.length; i++) {
+        let cardTitle = cards[i].getElementsByTagName('h1')[0].textContent.toLowerCase(); 
+        
+        if (cardTitle.includes(input)) {
+            cards[i].style.display = ""; 
+        } else {
+            cards[i].style.display = "none"; 
+        }
+    }
+});
 
     </script>
 </html>
