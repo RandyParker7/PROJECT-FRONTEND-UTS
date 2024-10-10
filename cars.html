@@ -51,6 +51,9 @@
         <button class="filter-btn" data-brand="ferrari">Ferrari</button>
         <button class="filter-btn" data-brand="lamborghini">Lamborghini</button>
         <button class="filter-btn" data-brand="porsche">Porsche</button>
+        <button class="filter-btn" data-brand="jeep">Jeep</button>
+        <button class="filter-btn" data-brand="rollsroyce">Rolls Royce</button>
+        <button class="filter-btn" data-brand="tesla">Tesla</button>
     </div>
 
     <!-- Card Start -->
@@ -63,7 +66,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="mclaren">
             <img src="img/artura1.jpg" alt="image">
             <div class="info">
                 <h1>Mclaren Artura</h1>
@@ -71,7 +74,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="ferrari">
             <img src="img/296gt3_1.jpg" alt="image">
             <div class="info">
                 <h1>Ferrari 296 GT3</h1>
@@ -79,7 +82,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="ferrari">
             <img src="img/aperta1.jpg" alt="image">
             <div class="info">
                 <h1>Laferrari Aperta</h1>
@@ -87,7 +90,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="jeep">
             <img src="img/jeep1.jpeg" alt="image">
             <div class="info">
                 <h1>Jeep Wrangler</h1>
@@ -95,7 +98,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="jeep">
             <img src="img/gladiator1.jpg" alt="image">
             <div class="info">
                 <h1>Jeep Gladiator</h1>
@@ -103,7 +106,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="rollsroyce">
             <img src="img/royce1.jpg" alt="image">
             <div class="info">
                 <h1>Rolls Royce Ghost</h1>
@@ -111,7 +114,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="tesla">
             <img src="img/tesla1.jpg" alt="image">
             <div class="info">
                 <h1>Tesla Model Y</h1>
@@ -119,7 +122,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="ferrari">
             <img src="img/sf90xx1.jpg" alt="image">
             <div class="info">
                 <h1>Ferrari SF90 XX Stradale</h1>
@@ -127,7 +130,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="lamborghini">
             <img src="img/revuelto1.jpg" alt="image">
             <div class="info">
                 <h1>Lamborghini Revuelto</h1>
@@ -135,7 +138,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="lamborghini">
             <img src="img/temerario1.jpg" alt="image">
             <div class="info">
                 <h1>Lamborghini Temerario</h1>
@@ -143,7 +146,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="lamborghini">
             <img src="img/countach1.jpg" alt="image">
             <div class="info">
                 <h1>Lamborghini Countach LPI 800-4</h1>
@@ -151,7 +154,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="lamborghini">
             <img src="img/roadster1.jpg" alt="image">
             <div class="info">
                 <h1>Lamborghini Sián Roadster</h1>
@@ -159,7 +162,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="lamborghini">
             <img src="img/fkp1.jpg" alt="image">
             <div class="info">
                 <h1>Lamborghini Sián FKP 37</h1>
@@ -167,7 +170,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="porsche">
             <img src="img/gt3rs1.jpg" alt="image">
             <div class="info">
                 <h1>Porsche 911 GT3 RS</h1>
@@ -175,7 +178,7 @@
             </div>
         </div>
 
-        <div class="carscard">
+        <div class="carscard" data-brand="porsche">
             <img src="img/cayman1.jpg" alt="image">
             <div class="info">
                 <h1>Porsche 718 Cayman GT4 RS</h1>
@@ -243,23 +246,49 @@ document.querySelector('#search-button').onclick = (e) => {
 
 // Filter Button
 const filterButtons = document.querySelectorAll('.filter-btn');
-const carCards = document.querySelectorAll('.carscard');
+const carCardsContainer = document.querySelector('.cardcontainer');
+const carCards = Array.from(document.querySelectorAll('.carscard')); // Convert NodeList to Array
 
-// Add event listeners to filter buttons
+// Function to update the filter buttons
+function updateActiveButton(activeButton) {
+    filterButtons.forEach(button => {
+        if (button === activeButton) {
+            button.classList.add('active'); // Add active class to clicked button
+        } else {
+            button.classList.remove('active'); // Remove active class from others
+        }
+    });
+}
+
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
         const brand = button.getAttribute('data-brand');
 
-        // Filter cards based on the brand
+        // Remove all cards
+        while (carCardsContainer.firstChild) {
+            carCardsContainer.removeChild(carCardsContainer.firstChild);
+        }
+
+        // Create and append filtered cards
         carCards.forEach(card => {
             if (brand === 'all' || card.getAttribute('data-brand') === brand) {
-                card.classList.remove('hidden');  // Show the card
-            } else {
-                card.classList.add('hidden');    // Hide the card
+                const newCard = card.cloneNode(true);
+                carCardsContainer.appendChild(newCard);
             }
         });
+
+        // Update active button
+        updateActiveButton(button);
     });
 });
+
+// Initial rendering of all cards
+carCards.forEach(card => {
+    carCardsContainer.appendChild(card.cloneNode(true));
+});
+
+// Set the "All" button as active on page load
+document.querySelector('.filter-btn[data-brand="all"]').classList.add('active');
 
 document.getElementById('search-box').addEventListener('input', function() {
     let input = document.getElementById('search-box').value.toLowerCase(); 

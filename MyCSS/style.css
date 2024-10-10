@@ -766,14 +766,28 @@ body , html{
 .filter-btn {
     margin: 5px;
     padding: 10px 20px;
-    border: none;
-    background-color: #007BFF;
+    border: 2px solid white;
+    border-color: white;
+    background-color: black;
     color: white;
     cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
 }
 .filter-btn:hover {
-    background-color: #0056b3;
+    background-color: white;
+    color: black;
+    transition: 0.4s ease-in-out;
 }
+.filter-btn.active {
+    background-color: white;
+    color: black;
+}
+
 /* Cars Filter End */
 
 #hamburger-menu{
