@@ -1027,7 +1027,7 @@ body , html{
     
 }
 
-/* Halaman Cars dan Car review */
+/* Halaman Cars, read more dan Car review */
 @media (max-width: 1200px) {
     .cardcontainer{
         grid-template-columns: repeat(3, 1fr);
@@ -1041,6 +1041,12 @@ body , html{
         width: 600px;
         height: 300px;
     }
+    .car-wrapper{
+        max-width: 80%;
+    }
+    .car-showcase{
+        height: 350px;
+    }
 }
 @media (max-width: 768px) {
     .cardcontainer{
@@ -1049,5 +1055,11 @@ body , html{
     .reviewvid{
         width: 400px;
         height: 200px;
+    }
+    .car-wrapper{
+        max-width: 70%;
+    }
+    .car-showcase{
+        height: 230px;
     }
 }
