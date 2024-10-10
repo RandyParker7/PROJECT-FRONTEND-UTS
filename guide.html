@@ -3,303 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="MyCSS/style.css">
-    <title>Cars</title>
-    
-    <!-- fonts -->
+    <link rel="stylesheet" href="MyCSS/styles.css">
+    <title>Panduan Membeli Mobil</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Nav Start -->
+    
+    <!-- Navbar Start -->
     <nav class="navbar">
-        <a href="#" class="navbar-logo"><img src="img/logo.png" alt=""></a>
-
+        <a href="#" class="navbar-logo"><img src="img/logo.png" alt="Logo"></a>
         <div class="navbar-nav">
             <a href="index.html">Home</a>
-            <a href="#cars">Cars</a>
+            <a href="cars.html">Cars</a>
             <a href="event.html">Event & News</a>
             <a href="review.html">Car Review</a>
-            <a href="guide.html">Car Buying Guide</a>
+            <a href="#guide">Cars buying guide</a>
         </div>
-
-        <!-- Navbar Extra (search, hamburger menu) -->
         <div class="nav-extra">
             <a href="#" id="search-button"><i data-feather="search"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
-        <!-- Navbar Extra-->
-
-        <!-- Search Form Start -->
-        <div class="search-form">
-            <input type="search" id="search-box" placeholder="search here...">
-            <label for="search-box"><i data-feather="search"></i></label>
-        </div>
-        <!-- Search Form End -->
     </nav>
-    <!-- Nav End -->
+    <!-- Navbar End -->
 
-    <!-- Filter Buttons -->
-    <div class="filter-container">
-        <button class="filter-btn" data-brand="all">All</button>
-        <button class="filter-btn" data-brand="mclaren">McLaren</button>
-        <button class="filter-btn" data-brand="ferrari">Ferrari</button>
-        <button class="filter-btn" data-brand="lamborghini">Lamborghini</button>
-        <button class="filter-btn" data-brand="porsche">Porsche</button>
-        <button class="filter-btn" data-brand="jeep">Jeep</button>
-        <button class="filter-btn" data-brand="rollsroyce">Rolls Royce</button>
-        <button class="filter-btn" data-brand="tesla">Tesla</button>
-    </div>
-
-    <!-- Card Start -->
-    <div class="cardcontainer">
-        <div class="carscard" data-brand="mclaren">
-            <img src="img/senna1.jpg" alt="image">
-            <div class="info">
-                <h1>Mclaren Senna</h1>
-                <a href="Cars Card/card1.html" class="morebtn">Read More</a>
+    <main>
+        <section id="guide" class="guide-membeli-mobil">
+            <h1>Panduan Pembelian Mobil</h1>
+            <p>Temukan langkah-langkah yang perlu Anda pertimbangkan untuk memastikan keputusan pembelian mobil yang tepat.</p>
+            
+            <div class="brosur-pembelian-mobil">
+                <h2>Panduan Pembelian Mobil</h2>
+                <p>Berikut adalah panduan komprehensif untuk membantu Anda melalui proses pembelian kendaraan:</p>
+                <ul>
+                    <li>Tentukan anggaran Anda dengan cermat untuk menghindari biaya tak terduga.</li>
+                    <li>Sesuaikan pilihan mobil dengan gaya hidup dan kebutuhan harian Anda.</li>
+                    <li>Lakukan pemeriksaan menyeluruh pada kondisi kendaraan sebelum melakukan transaksi.</li>
+                    <li>Lakukan riset pasar untuk mendapatkan penawaran terbaik.</li>
+                </ul>
             </div>
-        </div>
-
-        <div class="carscard" data-brand="mclaren">
-            <img src="img/artura1.jpg" alt="image">
-            <div class="info">
-                <h1>Mclaren Artura</h1>
-                <a href="Cars Card/card2.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-
-        <div class="carscard" data-brand="ferrari">
-            <img src="img/296gt3_1.jpg" alt="image">
-            <div class="info">
-                <h1>Ferrari 296 GT3</h1>
-                <a href="Cars Card/card3.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-
-        <div class="carscard" data-brand="ferrari">
-            <img src="img/aperta1.jpg" alt="image">
-            <div class="info">
-                <h1>Laferrari Aperta</h1>
-                <a href="Cars Card/card4.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-
-        <div class="carscard" data-brand="jeep">
-            <img src="img/jeep1.jpeg" alt="image">
-            <div class="info">
-                <h1>Jeep Wrangler</h1>
-                <a href="Cars Card/card13.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-
-        <div class="carscard" data-brand="jeep">
-            <img src="img/gladiator1.jpg" alt="image">
-            <div class="info">
-                <h1>Jeep Gladiator</h1>
-                <a href="Cars Card/card14.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-
-        <div class="carscard" data-brand="rollsroyce">
-            <img src="img/royce1.jpg" alt="image">
-            <div class="info">
-                <h1>Rolls Royce Ghost</h1>
-                <a href="Cars Card/card15.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-
-        <div class="carscard" data-brand="tesla">
-            <img src="img/tesla1.jpg" alt="image">
-            <div class="info">
-                <h1>Tesla Model Y</h1>
-                <a href="Cars Card/card16.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-
-        <div class="carscard" data-brand="ferrari">
-            <img src="img/sf90xx1.jpg" alt="image">
-            <div class="info">
-                <h1>Ferrari SF90 XX Stradale</h1>
-                <a href="Cars Card/card5.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-
-        <div class="carscard" data-brand="lamborghini">
-            <img src="img/revuelto1.jpg" alt="image">
-            <div class="info">
-                <h1>Lamborghini Revuelto</h1>
-                <a href="Cars Card/card6.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-
-        <div class="carscard" data-brand="lamborghini">
-            <img src="img/temerario1.jpg" alt="image">
-            <div class="info">
-                <h1>Lamborghini Temerario</h1>
-                <a href="Cars Card/card7.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-
-        <div class="carscard" data-brand="lamborghini">
-            <img src="img/countach1.jpg" alt="image">
-            <div class="info">
-                <h1>Lamborghini Countach LPI 800-4</h1>
-                <a href="Cars Card/card8.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-
-        <div class="carscard" data-brand="lamborghini">
-            <img src="img/roadster1.jpg" alt="image">
-            <div class="info">
-                <h1>Lamborghini Sián Roadster</h1>
-                <a href="Cars Card/card9.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-
-        <div class="carscard" data-brand="lamborghini">
-            <img src="img/fkp1.jpg" alt="image">
-            <div class="info">
-                <h1>Lamborghini Sián FKP 37</h1>
-                <a href="Cars Card/card10.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-
-        <div class="carscard" data-brand="porsche">
-            <img src="img/gt3rs1.jpg" alt="image">
-            <div class="info">
-                <h1>Porsche 911 GT3 RS</h1>
-                <a href="Cars Card/card11.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-
-        <div class="carscard" data-brand="porsche">
-            <img src="img/cayman1.jpg" alt="image">
-            <div class="info">
-                <h1>Porsche 718 Cayman GT4 RS</h1>
-                <a href="Cars Card/card12.html" class="morebtn">Read More</a>
-            </div>
-        </div>
-    </div>
-    <!-- Card End -->
-    
-<!-- Footer Start-->
-<footer>
-    <div class="fol">
-        <p>FOLLOW US</p>
-        <a href="">Our Social Media</a>
-    </div>
-
-    <div class="socials">
-        <a href="#"><i data-feather="instagram"></i></a>
-        <a href="#"><i data-feather="twitter"></i></a>
-        <a href="#"><i data-feather="facebook"></i></a>
-    </div>
-
-    <div class="links">
-        <a href="index.html">Home</a>
-        <a href="#">Cars</a>
-        <a href="event.html">Event & News</a>
-        <a href="review.html">Car Review</a>
-        <a href="guide.html">Car Buying Guide</a>
-    </div>
-
-    <div class="credit">
-        <p>@2024<a href="">DriveLux</a></p>
-    </div>
-</footer>
-<!-- Footer End-->
         
-</body>
-    <!-- Icons -->
+            <div class="referensi-membeli-mobil">
+                <h2>Sumber Daya untuk Membantu Pembelian Mobil</h2>
+                <p>Akses informasi yang dapat mendukung keputusan pembelian Anda:</p>
+                <ul>
+                    <li>Kunjungi situs resmi dealer untuk informasi terkini dan penawaran.</li>
+ <li>Manfaatkan forum otomotif untuk berdiskusi dan mendapatkan pandangan dari pemilik kendaraan lain.</li>
+                    <li>Baca ulasan mendalam dari pengguna dan ahli otomotif untuk membuat keputusan yang terinformasi.</li>
+                </ul>
+            </div>
+        
+            <div class="tips-dan-trik-membeli-mobil">
+                <h2>Strategi Cerdas dalam Pembelian Mobil</h2>
+                <p>Optimalkan proses pembelian Anda dengan strategi yang terbukti efektif:</p>
+                <ul>
+                    <li>Jadilah negosiator yang handal dengan memahami nilai pasar mobil.</li>
+                    <li>Periksa semua aspek kendaraan, termasuk riwayat servis dan dokumen legal.</li>
+                    <li>Bandingkan harga dan fitur di berbagai dealer untuk menemukan penawaran yang paling menguntungkan.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="sports-car-price-range">
+            <h2>Rentang Harga Mobil Sport</h2>
+            <p>Pilih rentang harga untuk mobil sport yang Anda cari:</p>
+            <input type="range" id="priceRange" min="0" max="1000000" value="50000" step="5000">
+            <p>Harga maksimal: <span id="priceValue">$50,000</span></p>
+            <button id="showSportsCars">Tampilkan Mobil Sport</button>
+            <div id="sportsCarResult"></div>
+        </section>
+    </main>
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="fol">
+            <p>FOLLOW US</p>
+            <a href="#">Our Social Media</a>
+        </div>
+        <div class="socials">
+            <a href="#"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="twitter"></i></a>
+            <a href="#"><i data-feather="facebook"></i></a>
+        </div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="cars.html">Cars</a>
+            <a href="event.html">Event & News</a>
+            <a href="review.html">Car Review</a>
+            <a href="#guide">Panduan Membeli Mobil</a>
+        </div>
+        <div class="credit">
+            <p>&copy; 2024 <a href="#">DriveLux</a></p>
+        </div>
+    </footer>
+    <!-- Footer End -->
     <script>
         feather.replace();
-    </script>
-
-    <script src="script.js"></script>
-    <!-- Filter -->
-    <script>
-
-// Toggle
-const navbarNav = document.querySelector ('.navbar-nav');
-const hamburgerMenu = document.querySelector('#hamburger-menu');
-// ketika
-document.querySelector('#hamburger-menu').onclick = () => {
-    navbarNav.classList.toggle('active');
-};
-
-//Toggle class active search form
-const searchForm = document.querySelector('.search-form'); 
-const searchBox = document.querySelector('#search-box');
-const searchButton = document.querySelector('#search-button');
-
-document.querySelector('#search-button').onclick = (e) => {
-    searchForm.classList.toggle('active');
-    searchBox.focus();
-    e.preventDefault();
-};
-
-    // Tombol Filter
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const carCardsContainer = document.querySelector('.cardcontainer');
-    const carCards = Array.from(document.querySelectorAll('.carscard'));
-
-    // Penunjuk tombol filter yang aktif
-    function updateActiveButton(activeButton) {
-        filterButtons.forEach(button => {
-            if (button === activeButton) {
-                button.classList.add('active');
-            } else {
-                button.classList.remove('active');
-            }
-        });
-    }
-
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const brand = button.getAttribute('data-brand');
-
-            while (carCardsContainer.firstChild) {
-                carCardsContainer.removeChild(carCardsContainer.firstChild);
-            }
-
-            carCards.forEach(card => {
-                if (brand === 'all' || card.getAttribute('data-brand') === brand) {
-                    const newCard = card.cloneNode(true);
-                    carCardsContainer.appendChild(newCard);
-                }
-            });
-
-            updateActiveButton(button);
-        });
-    });
-
-    carCards.forEach(card => {
-        carCardsContainer.appendChild(card.cloneNode(true));
-    });
-
-    // Menyalakan filter All saat pertama kali load
-    document.querySelector('.filter-btn[data-brand="all"]').classList.add('active');
-
-    document.getElementById('search-box').addEventListener('input', function() {
-        let input = document.getElementById('search-box').value.toLowerCase(); 
-        let cards = document.getElementsByClassName('carscard'); 
         
-
-        for (let i = 0; i < cards.length; i++) {
-            let cardTitle = cards[i].getElementsByTagName('h1')[0].textContent.toLowerCase(); 
-            
-            if (cardTitle.includes(input)) {
-                cards[i].style.display = ""; 
+        // Update price value from range input
+        const priceRange = document.getElementById('priceRange');
+        const priceValue = document.getElementById('priceValue');
+        
+        priceRange.addEventListener('input', function() {
+            priceValue.textContent = `$${this.value}`;
+        });
+        
+        // Sports cars data with images
+        const sportsCars = [
+            { name: "Mclaren Senna", price: 1000000, image: "https://www.carscoops.com/wp-content/uploads/2019/12/McLaren-Senna-.jpg" },
+            { name: "Porsche 911", price: 120000, image: "https://wallpapercave.com/wp/wp2430932.jpg" },
+            { name: "Chevrolet Corvette", price: 70000, image: "https://bringatrailer.com/wp-content/uploads/2020/10/2019_chevrolet_corvette_zr1_1608127364d768c91b944-DSC_8273.jpg" },
+            { name: "Lamborghini Huracan", price: 300000, image: "https://images.hdqwalls.com/download/lamborghini-huracan-lb-performance-6h-3840x2160.jpg" },
+            { name: "Ford Mustang", price: 45000, image: "https://www.hdcarwallpapers.com/walls/2019_ford_series_1_mustang_rtr_4k-HD.jpg" },
+            { name: "Nissan GT-R", price: 115000, image: "https://www.hdcarwallpapers.com/walls/nissan_gt_r_nismo_2015-HD.jpg" },
+            { name: "Aston Martin Vantage", price: 140000, image: "https://tse3.mm.bing.net/th?id=OIP.oyZCtOMvduO5k-VaurzvwwHaEj&pid=Api&P=0&h=220" }, 
+        ];
+    
+        document.getElementById('showSportsCars').onclick = function () {
+            const maxPrice = parseInt(priceRange.value);
+            const resultContainer = document.getElementById('sportsCarResult');
+            resultContainer.innerHTML = ''; 
+    
+            const affordableSportsCars = sportsCars.filter(car => car.price <= maxPrice);
+            if (affordableSportsCars.length > 0) {
+                resultContainer.innerHTML = '<h3>Mobil Sport yang Anda dapatkan:</h3>';
+                affordableSportsCars.forEach(car => {
+                    resultContainer.innerHTML += `
+                        <div style="margin-bottom: 10px;">
+                            <p>${car.name} - $${car.price}</p>
+                            <img src="${car.image}" alt="${car.name}" style="width: 200px; height: auto;">
+                        </div>`;
+                });
             } else {
-                cards[i].style.display = "none"; 
+                resultContainer.innerHTML = '<p>Tidak ada mobil sport dalam rentang harga ini.</p>';
             }
-        }
-    });
-
-    </script>
+        };
+    </script>        
+</body>
 </html>
