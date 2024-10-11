@@ -162,9 +162,9 @@ document.querySelector('#search-button').onclick = (e) => {
 
         document.querySelectorAll('.car-item a').forEach(item => {
             item.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent the default anchor behavior
-                const newImageSrc = this.querySelector('img').src; // Get the source of the clicked image
-                document.querySelector('.car-showcase img').src = newImageSrc; // Update the main image
+                event.preventDefault();
+                const newImageSrc = this.querySelector('img').src;
+                document.querySelector('.car-showcase img').src = newImageSrc;
             });
         });
     </script>
