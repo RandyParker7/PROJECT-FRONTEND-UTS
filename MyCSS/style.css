@@ -247,13 +247,7 @@ body {
     grid-column-gap: 35px;
     position: relative;
     overflow: hidden;
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-.carscard.hidden{
-    visibility: hidden;
-    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 .carscard{
     width: 300px;
