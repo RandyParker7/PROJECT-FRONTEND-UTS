@@ -648,7 +648,6 @@ ul{
 }
 .active{
     color: white;
-    text-decoration: underline;
     font-weight: bold;
 }
 body , html{

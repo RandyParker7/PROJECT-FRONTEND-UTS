@@ -52,6 +52,7 @@ function autoSlides() {
     }
     setTimeout(autoSlides, 5000); 
 }
+autoSlides();
 
 // Toggle
 const navbarNav = document.querySelector ('.navbar-nav');
